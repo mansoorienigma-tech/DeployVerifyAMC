@@ -1,0 +1,390 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+Hierarchy Flattening Report for soc_dlmc_rfsoc_zcu111
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdFlattenHierarchy'); else local_onload();}} catch(err) {};">
+<font SIZE="+2" COLOR="#000066">
+Hierarchy Flattening Report for soc_dlmc_rfsoc_zcu111
+</font>
+<br /><br /><br /><script>
+<!--
+function hdlTableShrink(o,tagNameStr)
+{
+var temp = document.getElementsByName(tagNameStr);
+if (temp[0].style.display == "")
+{
+	temp[0].style.display = "none";
+	o.innerHTML = '<span style="font-family:monospace">[+]</span>';
+}
+else
+{
+	temp[0].style.display = "";
+	o.innerHTML = '<span style="font-family:monospace">[-]</span>';
+}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableCollapseAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[+]</span>';
+	}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableExpandAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[-]</span>';
+	}
+}
+// -->
+</script>
+<a name="List of subsystems:">
+<font size="+1" color="#000066">
+<b class="midprod">
+List of subsystems:
+</b>
+
+</font>
+
+</a>
+<br /><br /><b>
+<li>'FlattenHierarchy' turned 'on':</li>
+</b>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'onList')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span name="onList" id="onList" style="display: none;">
+<ul class="SystemdefinedCollapse" id="ce9f5a3a-4a11-45f9-814e-c777d94ca192" dataCollapse="off">
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27353\')'})"  name="code2model" class="code2model">
+HDL Counter
+</a>
+
+</li>
+<li>
+soc_dlmc_rfsoc_dut/Tranmit Repeat/NCO Test Signal/NCO
+HDL Optimized1/WaveformGen/LookUpTableGen/Lookup Table1
+</li>
+<li>
+soc_dlmc_rfsoc_dut/Tranmit Repeat/NCO Test Signal/NCO
+HDL Optimized1/WaveformGen/LookUpTableGen/Lookup Table2
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27919\')'})"  name="code2model" class="code2model">
+HDL Counter
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27941\')'})"  name="code2model" class="code2model">
+HDL Counter1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27968\')'})"  name="code2model" class="code2model">
+HDL Counter10
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27944\')'})"  name="code2model" class="code2model">
+HDL Counter2
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27947\')'})"  name="code2model" class="code2model">
+HDL Counter3
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27950\')'})"  name="code2model" class="code2model">
+HDL Counter4
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27953\')'})"  name="code2model" class="code2model">
+HDL Counter5
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27956\')'})"  name="code2model" class="code2model">
+HDL Counter6
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27959\')'})"  name="code2model" class="code2model">
+HDL Counter7
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27962\')'})"  name="code2model" class="code2model">
+HDL Counter8
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27965\')'})"  name="code2model" class="code2model">
+HDL Counter9
+</a>
+
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, 'ce9f5a3a-4a11-45f9-814e-c777d94ca192')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><br /><b>
+<li>'FlattenHierarchy' turned 'off':</li>
+</b>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'offList')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span name="offList" id="offList" style="display: none;">
+<ul class="SystemdefinedCollapse" id="b4e9c3ec-573a-4208-9f0b-054aaa0886f8" dataCollapse="off">
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27916\')'})"  name="code2model" class="code2model">
+TxRepeat LUT Interface
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27291\')'})"  name="code2model" class="code2model">
+NCO Test Signal
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27979\')'})"  name="code2model" class="code2model">
+Tranmit Repeat
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27442\')'})"  name="code2model" class="code2model">
+sr_latch2
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27434\')'})"  name="code2model" class="code2model">
+sr_latch1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27426\')'})"  name="code2model" class="code2model">
+sr_latch
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27394\')'})"  name="code2model" class="code2model">
+fwft_logic
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27393\')'})"  name="code2model" class="code2model">
+dtci
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27385\')'})"  name="code2model" class="code2model">
+hdl_fwft_fifo
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27372\')'})"  name="code2model" class="code2model">
+FWFT_FIFO
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27360\')'})"  name="code2model" class="code2model">
+sr_latch
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27352\')'})"  name="code2model" class="code2model">
+Detect
+Increase
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27344\')'})"  name="code2model" class="code2model">
+EnableConsecutiveFrames
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27986\')'})"  name="code2model" class="code2model">
+DL Input Data Format
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27328\')'})"  name="code2model" class="code2model">
+CountBackPressure
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut\')'})"  name="code2model" class="code2model">
+soc_dlmc_rfsoc_dut
+</a>
+
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, 'b4e9c3ec-573a-4208-9f0b-054aaa0886f8')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><br /><a name="Flattening Status:">
+<font size="+1" color="#000066">
+<b class="midprod">
+Flattening Status:
+</b>
+
+</font>
+
+</a>
+<br /><br />'Hierarchical flattening' was successful.<br /><br /><a name="Generated Model">
+<font size="+1" color="#000066">
+<b class="midprod">
+Generated Model
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Generated model after the transformation
+</td>
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'open_system(\'E:\\AMC_Projects\\deployModule\\AMCMatlab\\hdl_prj\\hdlsrc\\soc_dlmc_rfsoc_zcu111\\gm_soc_dlmc_rfsoc_dut\')'})"  class="callMATLAB" name="callMATLAB">gm_soc_dlmc_rfsoc_dut</a>
+</td>
+
+</tr>
+
+</table>
+<br />
+<script>function postParentWindowMessage(message) {window.parent.postMessage(message, "*");}</script>
+</body>
+
+</html>

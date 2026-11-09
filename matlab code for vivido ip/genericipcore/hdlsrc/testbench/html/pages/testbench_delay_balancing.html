@@ -1,0 +1,3950 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+Delay Balancing Report for testbench
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdDelayBalancing'); else local_onload();}} catch(err) {};">
+<font SIZE="+2" COLOR="#000066">
+Delay Balancing Report for testbench
+</font>
+<br /><br /><br /><a name="Summary">
+<font size="+1" color="#000066">
+<b class="midprod">
+Summary
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Port
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Pipeline Latency
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Phase Delay
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/dut_rd_m2s
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/dut_wr_m2s
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/wr_reqCounter
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/debug_read_data
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/dut_wr_data
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/dma_from_ddr4_done
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/done
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/dma_to_ddr4_done
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/debug_wr_data
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/weight_rd_m2s
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/debug_rd_m2s
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/debug_wr_m2s
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/InputValid
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/InputAddr
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/InputSize
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/OutputValid
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/OutputAddr
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/OutputSize
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/StreamingDone
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/AXIStreamInReady
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/AXIStreamOutData
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/AXIStreamOutValid
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/PerfCounterOverflow
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/CONVStartCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/CONVEndCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/FCStartCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/FCEndCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/CustomStartCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/CustomEndCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/FrameStartCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/FrameEndCount
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/DLStart
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/CONVActive
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/FCActive
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+testbench/DUT/CustomActive
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+
+</table>
+<br /><br />Design delays are fully utilized to absorb latency introduced by optimizations and block implementations.<br /><br /><a name="Detailed Report">
+<font size="+1" color="#000066">
+<b class="midprod">
+Detailed Report
+</b>
+
+</font>
+
+</a>
+<br /><br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:980\')'})"  name="code2model" class="code2model">
+lrn_core1
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1020\')'})"  name="code2model" class="code2model">
+Divide
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+17
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:991\')'})"  name="code2model" class="code2model">
+Add4
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1021\')'})"  name="code2model" class="code2model">
+Exp
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+16
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1022\')'})"  name="code2model" class="code2model">
+Log
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+20
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1023\')'})"  name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1024\')'})"  name="code2model" class="code2model">
+Product1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1025\')'})"  name="code2model" class="code2model">
+Product2
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1003\')'})"  name="code2model" class="code2model">
+Delay12_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1142\')'})"  name="code2model" class="code2model">
+productDelay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1018\')'})"  name="code2model" class="code2model">
+Delay7_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1004\')'})"  name="code2model" class="code2model">
+Delay17_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+20
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1144\')'})"  name="code2model" class="code2model">
+productDelay2_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1006\')'})"  name="code2model" class="code2model">
+Delay3_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+16
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1002\')'})"  name="code2model" class="code2model">
+Delay11_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+17
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:105\')'})"  name="code2model" class="code2model">
+ReLUShift
+</a>
+
+</h5>
+List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:105:320\')'})"  name="code2model" class="code2model">
+QReLU_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+3
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+3/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:44\')'})"  name="code2model" class="code2model">
+ReLUModeSelection
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:50\')'})"  name="code2model" class="code2model">
+Relational
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:51\')'})"  name="code2model" class="code2model">
+Relational
+Operator1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:60\')'})"  name="code2model" class="code2model">
+Delay3_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:59\')'})"  name="code2model" class="code2model">
+Delay2_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:30\')'})"  name="code2model" class="code2model">
+ReLU
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:43\')'})"  name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3754:36\')'})"  name="code2model" class="code2model">
+Delay2
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+3
+</td>
+<td align="left" valign="top" style="border-style: none">
+4
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3688\')'})"  name="code2model" class="code2model">
+Mad
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3692\')'})"  name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3691\')'})"  name="code2model" class="code2model">
+MatchingConvLatency2_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1032\')'})"  name="code2model" class="code2model">
+Addtree 
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1042\')'})"  name="code2model" class="code2model">
+Add
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1043\')'})"  name="code2model" class="code2model">
+Add1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1044\')'})"  name="code2model" class="code2model">
+Add2
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1045\')'})"  name="code2model" class="code2model">
+Add3
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1046\')'})"  name="code2model" class="code2model">
+Add4
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1047\')'})"  name="code2model" class="code2model">
+Add5
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1048\')'})"  name="code2model" class="code2model">
+Add6
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1049\')'})"  name="code2model" class="code2model">
+Add7
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1051\')'})"  name="code2model" class="code2model">
+addrDelay10_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1050\')'})"  name="code2model" class="code2model">
+addrDelay1_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1053\')'})"  name="code2model" class="code2model">
+addrDelay2_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1057\')'})"  name="code2model" class="code2model">
+addrDelay6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1054\')'})"  name="code2model" class="code2model">
+addrDelay3_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1055\')'})"  name="code2model" class="code2model">
+addrDelay4_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1056\')'})"  name="code2model" class="code2model">
+addrDelay5_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:23040:1058\')'})"  name="code2model" class="code2model">
+addrDelay7_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20829\')'})"  name="code2model" class="code2model">
+Update
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20840\')'})"  name="code2model" class="code2model">
+Relational
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20841\')'})"  name="code2model" class="code2model">
+Sum
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20834\')'})"  name="code2model" class="code2model">
+Delay1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+5
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20833\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2669:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2669:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2669:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2670:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2670:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2670:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2671:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2671:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2671:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2672:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2672:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2672:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2673:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2673:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2673:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2674:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2674:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2674:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2675:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2675:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2675:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2676:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2676:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2676:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2677:102\')'})"  name="code2model" class="code2model">
+MulAddComp
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2677:102:122\')'})"  name="code2model" class="code2model">
+Multiply-Add_mul
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:21019:2677:102:120\')'})"  name="code2model" class="code2model">
+result6_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+12
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1147\')'})"  name="code2model" class="code2model">
+OperatorTree0
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1148\')'})"  name="code2model" class="code2model">
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1149\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1144\')'})"  name="code2model" class="code2model">
+Operator2
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1145\')'})"  name="code2model" class="code2model">
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1146\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1122\')'})"  name="code2model" class="code2model">
+OperatorTree0
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1123\')'})"  name="code2model" class="code2model">
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1124\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1119\')'})"  name="code2model" class="code2model">
+Operator1
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1120\')'})"  name="code2model" class="code2model">
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1121\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1097\')'})"  name="code2model" class="code2model">
+OperatorTree0
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1098\')'})"  name="code2model" class="code2model">
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1099\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1094\')'})"  name="code2model" class="code2model">
+Operator0
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1095\')'})"  name="code2model" class="code2model">
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20705:1096\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:44\')'})"  name="code2model" class="code2model">
+ReLUModeSelection
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:50\')'})"  name="code2model" class="code2model">
+Relational
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:51\')'})"  name="code2model" class="code2model">
+Relational
+Operator1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:60\')'})"  name="code2model" class="code2model">
+Delay3_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:59\')'})"  name="code2model" class="code2model">
+Delay2_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:30\')'})"  name="code2model" class="code2model">
+ReLU
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:43\')'})"  name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20877:36\')'})"  name="code2model" class="code2model">
+Delay2
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20422\')'})"  name="code2model" class="code2model">
+Bias
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20425\')'})"  name="code2model" class="code2model">
+Add
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:10198:431:1856:22194:20426\')'})"  name="code2model" class="code2model">
+MatchingBiasLatency_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:44\')'})"  name="code2model" class="code2model">
+ReLUModeSelection
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:50\')'})"  name="code2model" class="code2model">
+Relational
+Operator
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:51\')'})"  name="code2model" class="code2model">
+Relational
+Operator1
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:59\')'})"  name="code2model" class="code2model">
+Delay2_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:60\')'})"  name="code2model" class="code2model">
+Delay3_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:30\')'})"  name="code2model" class="code2model">
+ReLU
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:43\')'})"  name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:850:36\')'})"  name="code2model" class="code2model">
+Delay2
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:1058\')'})"  name="code2model" class="code2model">
+DL Custom Layers
+</a>
+
+</h5>
+List of blocks that introduced latency:<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Introduced
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:1058:1491:11\')'})"  name="code2model" class="code2model">
+Add
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:1058:1501:6\')'})"  name="code2model" class="code2model">
+Product
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+
+</tr>
+
+</table>
+<br />List of delay blocks that absorbed latency. To exclude specific delay block from being used for absorption, turn off block property 'AllowDelayDistribution':<table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Delay Block
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Sample Time
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Latency Absorbed
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Remaining Delays
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Unabsorbed Latency (total/non-absorbable)
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:1058:1491:14\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:12029:1058:1501:13\')'})"  name="code2model" class="code2model">
+Delay_absorbed
+</a>
+
+</td>
+<td align="left" valign="top" style="border-style: none">
+1
+</td>
+<td align="left" valign="top" style="border-style: none">
+6
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+0/0
+</td>
+
+</tr>
+
+</table>
+<br /><br /><br /><br />
+<script>function postParentWindowMessage(message) {window.parent.postMessage(message, "*");}</script>
+</body>
+
+</html>

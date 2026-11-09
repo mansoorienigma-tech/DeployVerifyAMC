@@ -1,0 +1,18 @@
+<: setFileName "hdlverifier_axi_manager_clocks" :>
+<: setOutputDirectory "./synth" :>
+<: setFileExtension ".xdc" :>
+<: set deviceFamily [getProjectFamily] :>
+
+<: if {[string first "uplus" $deviceFamily] == -1 } { :>
+create_clock -period 30.000 -name tck -waveform {0.000 15.000} [get_pins -filter { NAME =~  "*/TCK*" } -of_objects [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ *.BSCANE2 }]] 
+<: } else { :>
+create_clock -period 30.000 -name tck -waveform {0.000 15.000} [get_pins -filter { NAME =~  "*/INTERNAL_TCK*" } -of_objects [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ *.BSCANE2 }]] 
+<: } :>
+set_clock_groups -asynchronous -group [get_clocks {tck}] -group [get_clocks -of_objects [get_nets -filter { NAME =~  "*aclk" }  -of_objects [get_cells -hierarchical -filter { NAME =~  "*readram" } ]] ]
+set_property CLOCK_BUFFER_TYPE BUFG [get_nets tck]
+set_property ASYNC_REG TRUE [get_cells -hierarchical -filter {name =~ *address_async_stage*}]
+set_property ASYNC_REG TRUE [get_cells -hierarchical -filter {name =~ *burst_length_async_stage*}]
+set_property ASYNC_REG TRUE [get_cells -hierarchical -filter {name =~ *burst_type_async_stage*}]
+set_property ASYNC_REG TRUE [get_cells -hierarchical -filter {name =~ *start_read_async_stage*}]
+set_property ASYNC_REG TRUE [get_cells -hierarchical -filter {name =~ *start_write_async_stage*}]
+set_property ASYNC_REG TRUE [get_cells -hierarchical -filter {name =~ *tck_reset_async_stage*}]

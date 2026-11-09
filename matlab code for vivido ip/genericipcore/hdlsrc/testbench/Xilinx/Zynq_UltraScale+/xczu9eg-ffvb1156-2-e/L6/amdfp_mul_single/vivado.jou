@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Oct 26 20:31:29 2026
+# Process ID: 6380
+# Current directory: C:/Users/admin/Desktop/genericipcore/hdlsrc/testbench/Xilinx/Zynq_UltraScale+/xczu9eg-ffvb1156-2-e/L6/amdfp_mul_single
+# Command line: vivado.exe -mode batch -source C:\Users\admin\Desktop\genericipcore\hdlsrc\testbench\Xilinx\Zynq_UltraScale+\xczu9eg-ffvb1156-2-e\L6\amdfp_mul_single\amdfp_mul_single_scripts.tcl
+# Log file: C:/Users/admin/Desktop/genericipcore/hdlsrc/testbench/Xilinx/Zynq_UltraScale+/xczu9eg-ffvb1156-2-e/L6/amdfp_mul_single/vivado.log
+# Journal file: C:/Users/admin/Desktop/genericipcore/hdlsrc/testbench/Xilinx/Zynq_UltraScale+/xczu9eg-ffvb1156-2-e/L6/amdfp_mul_single\vivado.jou
+# Running On: K55VD, OS: Windows, CPU Frequency: 2494 MHz, CPU Physical cores: 2, Host memory: 12764 MB
+#-----------------------------------------------------------
+source {C:\Users\admin\Desktop\genericipcore\hdlsrc\testbench\Xilinx\Zynq_UltraScale+\xczu9eg-ffvb1156-2-e\L6\amdfp_mul_single\amdfp_mul_single_scripts.tcl}

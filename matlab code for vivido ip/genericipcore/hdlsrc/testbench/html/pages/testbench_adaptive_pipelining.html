@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+Adaptive Pipelining Report for testbench
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdAdaptivePipelining'); else local_onload();}} catch(err) {};">
+<font SIZE="+2" COLOR="#000066">
+Adaptive Pipelining Report for testbench
+</font>
+<br /><br /><br /><b>
+Subsystem: <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'testbench:3588:8715:2272:3631\')'})"  name="code2model" class="code2model">
+FCController
+</a>
+
+</b>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeee">
+<th align="left" valign="top" style="border-style: none">
+<b>
+Block Name
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Number of pipelines inserted
+</b>
+
+</th>
+<th align="left" valign="top" style="border-style: none">
+<b>
+Notes
+</b>
+
+</th>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'hilite_system(\'testbench/DUT/DUT/FC Kernel/Real FC Kernel/FCEngine/FCDUT/FCUnit/MVMul1/FCController/Multiply-Add\');'})" >Multiply-Add</a>
+</td>
+<td align="left" valign="top" style="border-style: none">
+0
+</td>
+<td align="left" valign="top" style="border-style: none">
+Unable to insert required number of pipeline registers because the block, testbench/DUT/DUT/FC Kernel/Real FC Kernel/FCEngine/FCDUT/FCUnit/MVMul1/FCController/Multiply-Add, is in a feedback loop and there is not enough latency budget at the output of the block. Number of registers required: 3; number of registers inserted: 0. Consider increasing the latency budget by adding more design delays in the feedback loop or using clock-rate pipelining.
+</td>
+
+</tr>
+
+</table>
+<br /><br /><br /><br />
+<script>function postParentWindowMessage(message) {window.parent.postMessage(message, "*");}</script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xczu28dr-ffvg1517-2-e",
+      "gen_directory": "../../../../deep_learning_ip.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "GenericProcessor_0": ""
+    },
+    "components": {
+      "GenericProcessor_0": {
+        "vlnv": "xilinx.com:ip:GenericProcessor:1.0",
+        "ip_revision": "2114846577",
+        "xci_name": "design_1_GenericProcessor_0_0",
+        "xci_path": "ip\\design_1_GenericProcessor_0_0\\design_1_GenericProcessor_0_0.xci",
+        "inst_hier_path": "GenericProcessor_0",
+        "interface_ports": {
+          "AXI4_Master_Activation_Data": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "AXI4_Master_Activation_Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "AXI4_Master_Weight_Data": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "AXI4_Master_Weight_Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "AXI4_Master_Debug": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "AXI4_Master_Debug",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "AXI4_Master_Activation_Data": {
+              "range": "4G",
+              "width": "32"
+            },
+            "AXI4_Master_Weight_Data": {
+              "range": "4G",
+              "width": "32"
+            },
+            "AXI4_Master_Debug": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+var modelInfo = {model:"soc_dlmc_handshake_ddr"};var modelHierarchy=[{model:"soc_dlmc_handshake_ddr",relativePath:"_internal.html",parent:"null"},];var AddCode = true;

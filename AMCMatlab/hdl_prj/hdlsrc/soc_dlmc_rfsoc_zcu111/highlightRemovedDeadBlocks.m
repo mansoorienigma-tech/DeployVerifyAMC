@@ -1,0 +1,10 @@
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'red';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB/Delay2','user1');
+hilite_system('soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB/FWFT FIFO/Compare To Constant','user1');
+hilite_system('soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB/Logical Operator3','user1');
+hilite_system('soc_dlmc_rfsoc_dut/FWFT_FIFO/hdl_fwft_fifo/dtci/Data Type Duplicate','user1');
+hilite_system('soc_dlmc_rfsoc_dut/FWFT_FIFO/hdl_fwft_fifo/fwft_logic/Add','user1');
+hilite_system('soc_dlmc_rfsoc_dut/FWFT_FIFO/hdl_fwft_fifo/fwft_logic/Add2','user1');

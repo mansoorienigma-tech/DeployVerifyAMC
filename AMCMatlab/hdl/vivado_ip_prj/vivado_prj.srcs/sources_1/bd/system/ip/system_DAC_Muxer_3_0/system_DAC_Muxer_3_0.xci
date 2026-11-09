@@ -1,0 +1,61 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "system_DAC_Muxer_3_0",
+    "cell_name": "DAC_Muxer_3",
+    "component_reference": "mathworks.com:user:DAC_Muxer:1.0",
+    "ip_revision": "38",
+    "gen_directory": "../../../../../../vivado_prj.gen/sources_1/bd/system/ip/system_DAC_Muxer_3_0",
+    "parameters": {
+      "component_parameters": {
+        "UPPER_WIDTH_0": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "LOWER_WIDTH_0": [ { "value": "16", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "UPPER_WIDTH_1": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "LOWER_WIDTH_1": [ { "value": "16", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "Component_Name": [ { "value": "system_DAC_Muxer_3_0", "resolve_type": "user", "usage": "all" } ],
+        "SAMPLESPERCLOCK": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "IQMODE": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "UPPER_WIDTH_0": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "LOWER_WIDTH_0": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "UPPER_WIDTH_1": [ { "value": "0", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "LOWER_WIDTH_1": [ { "value": "16", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "IQMODE": [ { "value": "true", "resolve_type": "generated", "format": "bool", "usage": "all" } ],
+        "SAMPLESPERCLOCK": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynquplusRFSOC" } ],
+        "BASE_BOARD_PART": [ { "value": "xilinx.com:zcu111:part0:1.2" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xczu28dr" } ],
+        "PACKAGE": [ { "value": "ffvg1517" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "E" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "38" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../vivado_prj.gen/sources_1/bd/system/ip/system_DAC_Muxer_3_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.2" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "DACLowerBits0": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "DACLowerBits1": [ { "direction": "in", "size_left": "15", "size_right": "0", "driver_value": "0" } ],
+        "ValidIn": [ { "direction": "in" } ],
+        "DAC": [ { "direction": "out", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "ValidOut": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+var modelInfo = {model:"soc_dlmc_rfsoc_dut"};var modelHierarchy=[{model:"soc_dlmc_rfsoc_dut",relativePath:"_internal.html",parent:"null"},{model:"soc_dlmc_handshake_ddr",relativePath:"../soc_dlmc_handshake_ddr/html/_internal.html",parent:"soc_dlmc_rfsoc_dut"},];var AddCode = true;

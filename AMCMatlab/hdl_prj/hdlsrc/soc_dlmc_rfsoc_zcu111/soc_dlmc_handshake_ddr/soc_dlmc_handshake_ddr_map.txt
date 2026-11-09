@@ -1,0 +1,12 @@
+soc_dlmc_handshake_ddr/Read From DDR --> Modulatio_ip_src_soc_dlmc_handshake_ddr_Read_From_DDR
+soc_dlmc_handshake_ddr/Trigger DL Input Next/Trigger Input Next --> Modulatio_ip_src_soc_dlmc_handshake_ddr_Trigger_Input_Next
+soc_dlmc_handshake_ddr/Trigger DL Input Next --> Modulatio_ip_src_soc_dlmc_handshake_ddr_Trigger_DL_Input_Next
+soc_dlmc_handshake_ddr/Read DL Registers/Read Input Registers --> Modulatio_ip_src_soc_dlmc_handshake_ddr_Read_Input_Registers
+soc_dlmc_handshake_ddr/Read DL Registers --> Modulatio_ip_src_soc_dlmc_handshake_ddr_Read_DL_Registers
+soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB/FWFT FIFO/HDL_FIFO/HDL_FIFO_classic/SimpleDualPortRAM_generic --> Modulatio_ip_src_soc_dlmc_handshake_ddr_SimpleDualPortRAM_generic
+soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB/FWFT FIFO/HDL_FIFO --> Modulatio_ip_src_soc_dlmc_handshake_ddr_HDL_FIFO
+soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB/FWFT FIFO --> Modulatio_ip_src_soc_dlmc_handshake_ddr_FWFT_FIFO
+soc_dlmc_handshake_ddr/Write To DDR/AXI4S_Slave_FIFO_MSB --> Modulatio_ip_src_soc_dlmc_handshake_ddr_AXI4S_Slave_FIFO_MSB
+soc_dlmc_handshake_ddr/Write To DDR/AXIM Write Conroller --> Modulatio_ip_src_soc_dlmc_handshake_ddr_AXIM_Write_Conroller
+soc_dlmc_handshake_ddr/Write To DDR --> Modulatio_ip_src_soc_dlmc_handshake_ddr_Write_To_DDR
+soc_dlmc_handshake_ddr --> Modulatio_ip_src_soc_dlmc_handshake_ddr_soc_dlmc_handshake_ddr

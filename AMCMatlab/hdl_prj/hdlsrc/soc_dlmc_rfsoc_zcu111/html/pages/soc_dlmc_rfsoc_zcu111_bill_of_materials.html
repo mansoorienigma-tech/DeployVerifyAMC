@@ -1,0 +1,1657 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>
+High-level Resource Utilization Report for soc_dlmc_rfsoc_zcu111
+</title>
+
+</head>
+<body bgcolor="#ffffff" link="0033CC" vlink="#666666" onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdBillOfMaterials'); else local_onload();}} catch(err) {};hdlTableShrink(this, 'Register_1_1');hdlTableShrink(this, 'Register_1_2');hdlTableShrink(this, 'Register_1_3');hdlTableShrink(this, 'Input_Port');hdlTableShrink(this, 'Output_Port');hdlTableShrink(this, 'Register_3_1');hdlTableShrink(this, 'Multiplexer_3_1');hdlTableShrink(this, 'Register_4_1');hdlTableShrink(this, 'Register_5_1');hdlTableShrink(this, 'Register_6_1');hdlTableShrink(this, 'Adder_7_1');hdlTableShrink(this, 'Register_7_1');hdlTableShrink(this, 'Multiplexer_7_1');hdlTableShrink(this, 'Multiplexer_7_2');hdlTableShrink(this, 'Register_8_1');hdlTableShrink(this, 'Register_10_1');hdlTableShrink(this, 'Register_10_2');hdlTableShrink(this, 'Register_10_3');hdlTableShrink(this, 'Multiplexer_10_1');hdlTableShrink(this, 'Multiplexer_10_2');hdlTableShrink(this, 'Adder_11_1');hdlTableShrink(this, 'Register_11_1');hdlTableShrink(this, 'Register_11_2');hdlTableShrink(this, 'Register_11_3');hdlTableShrink(this, 'Multiplexer_11_1');hdlTableShrink(this, 'Multiplexer_11_2');hdlTableShrink(this, 'Register_13_2');hdlTableShrink(this, 'Adder_14_1');hdlTableShrink(this, 'Register_14_1');">
+<script>
+<!--
+function hdlTableShrink(o,tagNameStr)
+{
+var temp = document.getElementsByName(tagNameStr);
+if (temp[0].style.display == "")
+{
+	temp[0].style.display = "none";
+	o.innerHTML = '<span style="font-family:monospace">[+]</span>';
+}
+else
+{
+	temp[0].style.display = "";
+	o.innerHTML = '<span style="font-family:monospace">[-]</span>';
+}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableCollapseAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "none";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[+]</span>';
+	}
+}
+// -->
+</script>
+<script>
+<!--
+function hdlTableExpandAll(o, numNtks, numComps)
+{
+	var id = "";
+	for (i = 1; i <= numNtks; i++)
+	{
+		for (j = 1; j <= numComps; j++)
+		{
+			id = "Multiply" + "_" + i + "_" + j;
+			var temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Adder" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Subtractor" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Register" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "RAM" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+			id = "Multiplexer" + "_" + i + "_" + j;
+			temp = document.getElementsByName(id);
+			if (temp != null && temp.length > 0)
+			{
+				temp[0].style.display = "";
+			}
+		}
+	}
+	var collapsibles = document.getElementsByName('collapsible');
+	for (i = 0; i < collapsibles.length; i++)
+	{
+		collapsibles[i].innerHTML = '<span style="font-family:monospace">[-]</span>';
+	}
+}
+// -->
+</script>
+<font SIZE="+2" COLOR="#000066">
+Generic Resource Report for soc_dlmc_rfsoc_zcu111
+</font>
+<br /><br /><br /><a name="Summary">
+<font size="+1" color="#000066">
+<b class="midprod">
+Summary
+</b>
+
+</font>
+
+</a>
+<br /><br /><table width="100%" border="1">
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Multipliers
+</td>
+<td align="center" valign="top" style="border-style: none">
+0
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Adders/Subtractors
+</td>
+<td align="center" valign="top" style="border-style: none">
+50
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Registers
+</td>
+<td align="center" valign="top" style="border-style: none">
+210
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Total 1-Bit Registers
+</td>
+<td align="center" valign="top" style="border-style: none">
+3286
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+RAMs
+</td>
+<td align="center" valign="top" style="border-style: none">
+2
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Multiplexers
+</td>
+<td align="center" valign="top" style="border-style: none">
+390
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+I/O Bits
+</td>
+<td align="center" valign="top" style="border-style: none">
+810
+</td>
+
+</tr>
+<tr style="background-color: #ffffff">
+<td align="left" valign="top" style="border-style: none">
+Static Shift operators
+</td>
+<td align="center" valign="top" style="border-style: none">
+3
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+Dynamic Shift operators
+</td>
+<td align="center" valign="top" style="border-style: none">
+2
+</td>
+
+</tr>
+
+</table>
+<br /><br /><a name="Detailed Report">
+<font size="+1" color="#000066">
+<b class="midprod">
+Detailed Report
+</b>
+
+</font>
+
+</a>
+<br /><br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut\')'})"  name="code2model" class="code2model">
+soc_dlmc_rfsoc_dut
+</a>
+
+</h5>
+<h5>
+Registers (11)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit Register 							: 2
+</span>
+<span name="Register_1_1" id="Register_1_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27250\')'})"  name="code2model" class="code2model">
+Delay1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27251\')'})"  name="code2model" class="code2model">
+Delay11
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 6
+</span>
+<span name="Register_1_2" id="Register_1_2">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27252\')'})"  name="code2model" class="code2model">
+Delay12
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27339\')'})"  name="code2model" class="code2model">
+Delay32
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27338\')'})"  name="code2model" class="code2model">
+Delay31
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27340\')'})"  name="code2model" class="code2model">
+Delay33
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27342\')'})"  name="code2model" class="code2model">
+Delay36
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_1_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 3
+</span>
+<span name="Register_1_3" id="Register_1_3">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27337\')'})"  name="code2model" class="code2model">
+Delay30
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27341\')'})"  name="code2model" class="code2model">
+Delay34
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Number of I/O Bits (810)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Input_Port')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+Number of Input Bits: 289
+</span>
+<span name="Input_Port" id="Input_Port">
+<ul class="SystemdefinedCollapse" id="bd015c3e-fb40-43bf-9c11-b0b886753868" dataCollapse="off">
+<li>
+clk: 1 bit
+</li>
+<li>
+reset: 1 bit
+</li>
+<li>
+clk_enable: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27132\')'})"  name="code2model" class="code2model">
+DUTProcstart
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27134\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlInDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27134\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlInDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27137\')'})"  name="code2model" class="code2model">
+AXIReadDataDL
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27138\')'})"  name="code2model" class="code2model">
+AXIReadCtrlInDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27138\')'})"  name="code2model" class="code2model">
+AXIReadCtrlInDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27139\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlInDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27139\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlInDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27242\')'})"  name="code2model" class="code2model">
+ADC Tile 0 Ch0 I Data
+</a>
+: 16 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27243\')'})"  name="code2model" class="code2model">
+ADC Tile 0 Ch0 Q Data
+</a>
+: 16 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27244\')'})"  name="code2model" class="code2model">
+ADC Tile 0 Ch0 Valid
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27288\')'})"  name="code2model" class="code2model">
+NCO Phase Incr
+</a>
+: 16 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27322\')'})"  name="code2model" class="code2model">
+Frame Size
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27323\')'})"  name="code2model" class="code2model">
+Trigger Capture
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27324\')'})"  name="code2model" class="code2model">
+Stream Enable
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27325\')'})"  name="code2model" class="code2model">
+Ready
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27535\')'})"  name="code2model" class="code2model">
+txEnable
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27972\')'})"  name="code2model" class="code2model">
+mod Test Signal Sel
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27135\')'})"  name="code2model" class="code2model">
+AXIReadCtrlInDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27135\')'})"  name="code2model" class="code2model">
+AXIReadCtrlInDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27136\')'})"  name="code2model" class="code2model">
+AXIReadDataDDR
+</a>
+: 128 bits
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, 'bd015c3e-fb40-43bf-9c11-b0b886753868')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Output_Port')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+Number of Output Bits: 521
+</span>
+<span name="Output_Port" id="Output_Port">
+<ul class="SystemdefinedCollapse" id="56f7e322-6ff5-4f81-a8e8-de3ff0ca1863" dataCollapse="off">
+<li>
+ce_out: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27143\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDL
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27143\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDL
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27143\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27143\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27144\')'})"  name="code2model" class="code2model">
+AXIWriteDataDL
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27145\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlOutDL
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27145\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlOutDL
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27145\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlOutDL
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27223\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlOutDDR
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27223\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlOutDDR
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27223\')'})"  name="code2model" class="code2model">
+AXIWriteCtrlOutDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27147\')'})"  name="code2model" class="code2model">
+AXIWriteDataDDR
+</a>
+: 128 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27148\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDDR
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27148\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDDR
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27148\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27148\')'})"  name="code2model" class="code2model">
+AXIReadCtrlOutDDR
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27268\')'})"  name="code2model" class="code2model">
+DAC Tile 1 Ch2 I Data
+</a>
+: 16 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27269\')'})"  name="code2model" class="code2model">
+DAC Tile 1 Ch2 Q Data
+</a>
+: 16 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27270\')'})"  name="code2model" class="code2model">
+DAC Tile 1 Ch2 Valid
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27475\')'})"  name="code2model" class="code2model">
+Valid
+</a>
+: 1 bit
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27476\')'})"  name="code2model" class="code2model">
+Captured Data
+</a>
+: 32 bits
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27477\')'})"  name="code2model" class="code2model">
+FIFO Almost Full Count
+</a>
+: 32 bits
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, '56f7e322-6ff5-4f81-a8e8-de3ff0ca1863')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27385\')'})"  name="code2model" class="code2model">
+hdl_fwft_fifo
+</a>
+
+</h5>
+<h5>
+Adders/Subtractors (4)
+</h5>
+<span style="font-family:monospace">
+14x14-bit Adder 							: 4
+</span>
+<br /><h5>
+Registers (7)
+</h5>
+<span style="font-family:monospace">
+14-bit Register 							: 5
+</span>
+<br /><span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<br /><span style="font-family:monospace">
+32-bit Register 							: 1
+</span>
+<br /><h5>
+RAMs (1)
+</h5>
+<span style="font-family:monospace">
+16384x32-bit RAM 							: 1
+</span>
+<br /><h5>
+Multiplexers (7)
+</h5>
+<span style="font-family:monospace">
+14-bit 2-to-1 Multiplexer 							: 4
+</span>
+<br /><span style="font-family:monospace">
+14-bit 3-to-1 Multiplexer 							: 1
+</span>
+<br /><span style="font-family:monospace">
+1-bit 2-to-1 Multiplexer 							: 1
+</span>
+<br /><span style="font-family:monospace">
+32-bit 2-to-1 Multiplexer 							: 1
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27394\')'})"  name="code2model" class="code2model">
+fwft_logic
+</a>
+
+</h5>
+<h5>
+Registers (2)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_3_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 2
+</span>
+<span name="Register_3_1" id="Register_3_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27424\')'})"  name="code2model" class="code2model">
+cache_reg
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27425\')'})"  name="code2model" class="code2model">
+out_reg
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_3_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit 2-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_3_1" id="Multiplexer_3_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27423\')'})"  name="code2model" class="code2model">
+Switch
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27442\')'})"  name="code2model" class="code2model">
+sr_latch2
+</a>
+
+</h5>
+<h5>
+Registers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_4_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<span name="Register_4_1" id="Register_4_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27448\')'})"  name="code2model" class="code2model">
+Unit Delay1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27426\')'})"  name="code2model" class="code2model">
+sr_latch
+</a>
+
+</h5>
+<h5>
+Registers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_5_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<span name="Register_5_1" id="Register_5_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27432\')'})"  name="code2model" class="code2model">
+Unit Delay1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27434\')'})"  name="code2model" class="code2model">
+sr_latch1
+</a>
+
+</h5>
+<h5>
+Registers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_6_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<span name="Register_6_1" id="Register_6_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27440\')'})"  name="code2model" class="code2model">
+Unit Delay1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27344\')'})"  name="code2model" class="code2model">
+EnableConsecutiveFrames
+</a>
+
+</h5>
+<h5>
+Adders/Subtractors (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Adder_7_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32x32-bit Adder 							: 1
+</span>
+<span name="Adder_7_1" id="Adder_7_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27353\')'})"  name="code2model" class="code2model">
+adder
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Registers (2)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_7_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 2
+</span>
+<span name="Register_7_1" id="Register_7_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27351\')'})"  name="code2model" class="code2model">
+Delay
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27353\')'})"  name="code2model" class="code2model">
+HDL Counter
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (4)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_7_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit 2-to-1 Multiplexer 							: 3
+</span>
+<span name="Multiplexer_7_1" id="Multiplexer_7_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27359\')'})"  name="code2model" class="code2model">
+Switch
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27353\')'})"  name="code2model" class="code2model">
+switchEnable
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27353\')'})"  name="code2model" class="code2model">
+switchReset
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_7_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit 2-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_7_2" id="Multiplexer_7_2">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27349\')'})"  name="code2model" class="code2model">
+Data Type Conversion
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27360\')'})"  name="code2model" class="code2model">
+sr_latch
+</a>
+
+</h5>
+<h5>
+Registers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_8_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<span name="Register_8_1" id="Register_8_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27366\')'})"  name="code2model" class="code2model">
+Unit Delay1
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27352\')'})"  name="code2model" class="code2model">
+Detect
+Increase
+</a>
+
+</h5>
+<h5>
+Registers (1)
+</h5>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27979\')'})"  name="code2model" class="code2model">
+Tranmit Repeat
+</a>
+
+</h5>
+<h5>
+Registers (5)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_10_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 1
+</span>
+<span name="Register_10_1" id="Register_10_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27973\')'})"  name="code2model" class="code2model">
+Delay2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_10_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit Register 							: 3
+</span>
+<span name="Register_10_2" id="Register_10_2">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27290\')'})"  name="code2model" class="code2model">
+Delay35
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27863\')'})"  name="code2model" class="code2model">
+Delay10
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_10_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<span name="Register_10_3" id="Register_10_3">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27862\')'})"  name="code2model" class="code2model">
+Delay7
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (3)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_10_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit 2-to-1 Multiplexer 							: 2
+</span>
+<span name="Multiplexer_10_1" id="Multiplexer_10_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27865\')'})"  name="code2model" class="code2model">
+Multiport
+Switch3
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_10_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit 2-to-1 Multiplexer 							: 1
+</span>
+<span name="Multiplexer_10_2" id="Multiplexer_10_2">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27864\')'})"  name="code2model" class="code2model">
+Multiport
+Switch2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27916\')'})"  name="code2model" class="code2model">
+TxRepeat LUT Interface
+</a>
+
+</h5>
+<h5>
+Adders/Subtractors (11)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Adder_11_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+10x10-bit Adder 							: 11
+</span>
+<span name="Adder_11_1" id="Adder_11_1">
+<ul class="SystemdefinedCollapse" id="3fb6a52f-ac2b-46ed-9b31-cb244e409c1d" dataCollapse="off">
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27919\')'})"  name="code2model" class="code2model">
+adder
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27941\')'})"  name="code2model" class="code2model">
+adder_1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27944\')'})"  name="code2model" class="code2model">
+adder_2
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27947\')'})"  name="code2model" class="code2model">
+adder_3
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27950\')'})"  name="code2model" class="code2model">
+adder_4
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27953\')'})"  name="code2model" class="code2model">
+adder_5
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27956\')'})"  name="code2model" class="code2model">
+adder_6
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27959\')'})"  name="code2model" class="code2model">
+adder_7
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27962\')'})"  name="code2model" class="code2model">
+adder_8
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27965\')'})"  name="code2model" class="code2model">
+adder_9
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27968\')'})"  name="code2model" class="code2model">
+adder_10
+</a>
+
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, '3fb6a52f-ac2b-46ed-9b31-cb244e409c1d')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><h5>
+Registers (34)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_11_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+10-bit Register 							: 11
+</span>
+<span name="Register_11_1" id="Register_11_1">
+<ul class="SystemdefinedCollapse" id="c87d8eee-2322-4f88-8eae-ea842acb4d91" dataCollapse="off">
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27919\')'})"  name="code2model" class="code2model">
+HDL Counter
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27941\')'})"  name="code2model" class="code2model">
+HDL Counter1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27944\')'})"  name="code2model" class="code2model">
+HDL Counter2
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27947\')'})"  name="code2model" class="code2model">
+HDL Counter3
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27950\')'})"  name="code2model" class="code2model">
+HDL Counter4
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27953\')'})"  name="code2model" class="code2model">
+HDL Counter5
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27956\')'})"  name="code2model" class="code2model">
+HDL Counter6
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27959\')'})"  name="code2model" class="code2model">
+HDL Counter7
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27962\')'})"  name="code2model" class="code2model">
+HDL Counter8
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27965\')'})"  name="code2model" class="code2model">
+HDL Counter9
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27968\')'})"  name="code2model" class="code2model">
+HDL Counter10
+</a>
+
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, 'c87d8eee-2322-4f88-8eae-ea842acb4d91')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_11_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit Register 							: 22
+</span>
+<span name="Register_11_2" id="Register_11_2">
+<ul class="SystemdefinedCollapse" id="aaf098c2-3859-4134-9eba-b1cf09ee51d4" dataCollapse="off">
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27921\')'})"  name="code2model" class="code2model">
+HW Delay
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27942\')'})"  name="code2model" class="code2model">
+HW Delay1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27945\')'})"  name="code2model" class="code2model">
+HW Delay2
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27948\')'})"  name="code2model" class="code2model">
+HW Delay3
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27951\')'})"  name="code2model" class="code2model">
+HW Delay4
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27954\')'})"  name="code2model" class="code2model">
+HW Delay5
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27957\')'})"  name="code2model" class="code2model">
+HW Delay6
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27960\')'})"  name="code2model" class="code2model">
+HW Delay7
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27963\')'})"  name="code2model" class="code2model">
+HW Delay8
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27966\')'})"  name="code2model" class="code2model">
+HW Delay9
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27969\')'})"  name="code2model" class="code2model">
+HW Delay10
+</a>
+
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, 'aaf098c2-3859-4134-9eba-b1cf09ee51d4')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_11_3')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 1
+</span>
+<span name="Register_11_3" id="Register_11_3">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27918\')'})"  name="code2model" class="code2model">
+Delay
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Multiplexers (13)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_11_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+10-bit 2-to-1 Multiplexer 							: 11
+</span>
+<span name="Multiplexer_11_1" id="Multiplexer_11_1">
+<ul class="SystemdefinedCollapse" id="e153d9c9-8233-464b-b754-3c76e27a45c2" dataCollapse="off">
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27919\')'})"  name="code2model" class="code2model">
+switch
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27941\')'})"  name="code2model" class="code2model">
+switch_1
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27944\')'})"  name="code2model" class="code2model">
+switch_2
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27947\')'})"  name="code2model" class="code2model">
+switch_3
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27950\')'})"  name="code2model" class="code2model">
+switch_4
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27953\')'})"  name="code2model" class="code2model">
+switch_5
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27956\')'})"  name="code2model" class="code2model">
+switch_6
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27959\')'})"  name="code2model" class="code2model">
+switch_7
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27962\')'})"  name="code2model" class="code2model">
+switch_8
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27965\')'})"  name="code2model" class="code2model">
+switch_9
+</a>
+
+</li>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27968\')'})"  name="code2model" class="code2model">
+switch_10
+</a>
+
+</li>
+
+</ul>
+<span class="SDCollapseControl" onclick="collapseSD(this, 'e153d9c9-8233-464b-b754-3c76e27a45c2')" onmouseover="this.style.cursor = 'pointer'">
+&#8743; Less
+</span>
+<br />
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Multiplexer_11_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+16-bit 11-to-1 Multiplexer 							: 2
+</span>
+<span name="Multiplexer_11_2" id="Multiplexer_11_2">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27940\')'})"  name="code2model" class="code2model">
+Multiport
+Switch2
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27291\')'})"  name="code2model" class="code2model">
+NCO Test Signal
+</a>
+
+</h5>
+<h5>
+Adders/Subtractors (8)
+</h5>
+<span style="font-family:monospace">
+14x14-bit Adder 							: 3
+</span>
+<br /><span style="font-family:monospace">
+15x15-bit Adder 							: 2
+</span>
+<br /><span style="font-family:monospace">
+14x14-bit Subtractor 							: 1
+</span>
+<br /><span style="font-family:monospace">
+15-bit Subtractor 							: 2
+</span>
+<br /><h5>
+Registers (34)
+</h5>
+<span style="font-family:monospace">
+1-bit Register 							: 19
+</span>
+<br /><span style="font-family:monospace">
+14-bit Register 							: 8
+</span>
+<br /><span style="font-family:monospace">
+19-bit Register 							: 1
+</span>
+<br /><span style="font-family:monospace">
+12-bit Register 							: 2
+</span>
+<br /><span style="font-family:monospace">
+4-bit Register 							: 2
+</span>
+<br /><span style="font-family:monospace">
+15-bit Register 							: 2
+</span>
+<br /><h5>
+Multiplexers (15)
+</h5>
+<span style="font-family:monospace">
+14-bit 2-to-1 Multiplexer 							: 7
+</span>
+<br /><span style="font-family:monospace">
+12-bit 2-to-1 Multiplexer 							: 2
+</span>
+<br /><span style="font-family:monospace">
+8-bit 3-to-1 Multiplexer 							: 4
+</span>
+<br /><span style="font-family:monospace">
+14-bit 3-to-1 Multiplexer 							: 2
+</span>
+<br /><h5>
+Number of Shift operators (2)
+</h5>
+<span style="font-family:monospace">
+Static Shift Right 							: 2
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27986\')'})"  name="code2model" class="code2model">
+DL Input Data Format
+</a>
+
+</h5>
+<h5>
+Adders/Subtractors (12)
+</h5>
+<span style="font-family:monospace">
+8x8-bit Adder 							: 4
+</span>
+<br /><span style="font-family:monospace">
+10x10-bit Adder 							: 2
+</span>
+<br /><span style="font-family:monospace">
+32x32-bit Adder 							: 2
+</span>
+<br /><span style="font-family:monospace">
+17-bit Subtractor 							: 2
+</span>
+<br /><span style="font-family:monospace">
+9x9-bit Subtractor 							: 2
+</span>
+<br /><h5>
+Registers (78)
+</h5>
+<span style="font-family:monospace">
+16-bit Register 							: 2
+</span>
+<br /><span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_13_2')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+1-bit Register 							: 24
+</span>
+<span name="Register_13_2" id="Register_13_2">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27278\')'})"  name="code2model" class="code2model">
+Delay4
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><span style="font-family:monospace">
+8-bit Register 							: 40
+</span>
+<br /><span style="font-family:monospace">
+9-bit Register 							: 2
+</span>
+<br /><span style="font-family:monospace">
+128-bit Register 							: 6
+</span>
+<br /><span style="font-family:monospace">
+60-bit Register 							: 2
+</span>
+<br /><span style="font-family:monospace">
+23-bit Register 							: 2
+</span>
+<br /><h5>
+Multiplexers (304)
+</h5>
+<span style="font-family:monospace">
+1-bit 2-to-1 Multiplexer 							: 4
+</span>
+<br /><span style="font-family:monospace">
+16-bit 2-to-1 Multiplexer 							: 2
+</span>
+<br /><span style="font-family:monospace">
+8-bit 2-to-1 Multiplexer 							: 290
+</span>
+<br /><span style="font-family:monospace">
+9-bit 2-to-1 Multiplexer 							: 4
+</span>
+<br /><span style="font-family:monospace">
+23-bit 2-to-1 Multiplexer 							: 4
+</span>
+<br /><h5>
+Number of Shift operators (2)
+</h5>
+<span style="font-family:monospace">
+128-bit Dynamic Shift Left 							: 2
+</span>
+<br /><p><hr /></p><h5>
+Report for Subsystem:    <a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27328\')'})"  name="code2model" class="code2model">
+CountBackPressure
+</a>
+
+</h5>
+<h5>
+Adders/Subtractors (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Adder_14_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32x32-bit Adder 							: 1
+</span>
+<span name="Adder_14_1" id="Adder_14_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27330\')'})"  name="code2model" class="code2model">
+Add
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><h5>
+Registers (1)
+</h5>
+<span name="collapsible" id="collapsible" style="font-family:monospace" onclick="hdlTableShrink(this, 'Register_14_1')" onmouseover="this.style.cursor = 'pointer'">
+[+]
+</span>
+<span style="font-family:monospace">
+32-bit Register 							: 1
+</span>
+<span name="Register_14_1" id="Register_14_1">
+<ul>
+<li>
+<a href="javascript: void(0)" onclick="postParentWindowMessage({message:'legacyMCall', expr:'coder.internal.code2model(\'soc_dlmc_rfsoc_dut:27332\')'})"  name="code2model" class="code2model">
+Delay16
+</a>
+
+</li>
+
+</ul>
+
+</span>
+<br /><p><hr /></p>
+<script>function postParentWindowMessage(message) {window.parent.postMessage(message, "*");}</script>
+</body>
+
+</html>
