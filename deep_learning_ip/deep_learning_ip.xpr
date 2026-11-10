@@ -48,7 +48,6 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="c:/Users/admin/Desktop/genericipcore/ipcore/GenericProcessor_v1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../matlab code for vivido ip/genericipcore/ipcore/GenericProcessor_v1_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
