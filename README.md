@@ -54,6 +54,14 @@ C:\Xilinx\Vivado\2023.2\bin\vivado.bat -mode batch -notrace -source verify_proje
 
 این اسکریپت پروژه را باز می‌کند، `system.bd` را validate می‌کند، وجود آی‌پی `GenericProcessor` را در کاتالوگ چک می‌کند و گزارش `ip_status.rpt` می‌سازد. اگر خروجی `OK: system.bd validated` را دیدید، پروژه سالم است.
 
+### د) سنتز و ساخت بیت‌استریم (بعد از ساخت بلاک‌دیزاین)
+
+```bat
+run_synth.bat
+```
+
+این مرحله سنتز (`synth_1`) و پیاده‌سازی (`impl_1`) را اجرا می‌کند و فایل بیت‌استریم را در `vivado_prj.runs/impl_1` می‌سازد. ⚠️ روی کامپیوتر ضعیف چند ساعت طول می‌کشد و RAM زیادی می‌خواهد — وقتی وقت داری اجرا کن.
+
 ### ج) باز کردن در GUI (اختیاری)
 
 بعد از ساخت موفق در حالت Batch، فایل `AMCMatlab/hdl/vivado_ip_prj/vivado_prj.xpr` را در Vivado 2023.2 باز کنید. بلاک‌دیزاین `system` شامل حدود ۹۰ IP است و روی سیستم‌های ضعیف سنگین است؛ اگر GUI کند/کرش کرد، بخش ۵ را ببینید.
