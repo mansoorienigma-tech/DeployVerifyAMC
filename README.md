@@ -96,6 +96,7 @@ run_synth.bat
 | `ERROR: [Common 17-55] 'set_property' expects at least one object` + `No files matched 'system.bd'` | اسکریپت قبل از ساختن دیزاین متوقف شده (معمولاً همان خطای نسخه). اول خطای نسخه را رفع کنید. |
 | خطای مسیر `E:/AMC_Projects/...` | مسیر مطلق قدیمی بود — **رفع شد**؛ حالا مسیرها نسبی هستند و روی هر کامپیوتر کار می‌کنند. |
 | `ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL ... is locked` + `module 'system_wrapper' not found` | بلاکدیزاین ذخیرهشده شامل IPهای قفلشده است (`Locked reason: BD contains locked IPs`)، پس `make_wrapper` روی پروژه بازشده جواب نمیدهد — **رفع شد**: wrapper حالا همان موقع ساخت BD (در `run_build.bat`) ساخته میشود، جایی که IPها تازه و بدون قفلاند. `run_synth.bat` هم اگر wrapper نباشد خودش پروژه را میسازد. |
+| GitHub Desktop مدام دهها فایل `.xci` و `vivado_prj.xpr` را تغییر یافته نشان میدهد | اینها خروجی تولیدشده Vivado هستند (پایان خطها و پارامتر `INSERT_VIP`) و نباید کامیت شوند. روی `discard_generated.bat` دابلکلیک کنید یا در GitHub Desktop از منوی Changes گزینه Discard all changes را بزنید. `send_report.bat` هم فقط خود report را کامیت میکند، نه این فایلها را. |
 | `ERROR: [Common 17-53] Top module not set for synthesis run` | تاپ ماژول `system_wrapper` تنظیم نشده بود — **رفع شد**. |
 
 ---
@@ -112,6 +113,7 @@ AMCMatlab/
       run_build.bat                                          ← اجرای یک‌کلیکی در ویندوز
       run_synth.bat                                         ← سنتز، بیتاستریم و ارسال خودکار گزارش
       send_report.bat                                       ← ساخت و push خلاصه لاگ (بدون سنتز)
+      discard_generated.bat                                ← پاک کردن تغییرات فایلهای تولیدی Vivado
       verify_project.tcl                                     ← بررسی سلامت بدون GUI
       vivado_prj.xpr                                         ← پروژهٔ Vivado 2023.2
       ipcore/tclutils/add_system.tcl                         ← Tcl ساب‌سیستم (2023.2)
@@ -133,3 +135,4 @@ add_system_original_backup.tcl                               ← بکاپ اصل
 - `vivado_prj.xpr` و `deep_learning_ip.xpr`: مسیرهای مطلق قدیمی (`C:/Users/admin/...`) حذف شد.
 - `.gitignore`: خروجی‌های تولیدی Vivado (`*.gen`, `*.cache`, `*.runs`, ...) نادیده گرفته شد.
 - `send_report.bat`: خلاصه کوچک `vivado.log` را در `synth_report.txt` مینویسد و خودکار push میکند؛ نیازی به اسکرینشات یا کپی دستی نیست.
+- `discard_generated.bat`: تغییرات فایلهای `.xci` و `.xpr` را که Vivado هر بار بازنویسی میکند، به حالت HEAD برمیگرداند تا لیست Changes شلوغ نشود.

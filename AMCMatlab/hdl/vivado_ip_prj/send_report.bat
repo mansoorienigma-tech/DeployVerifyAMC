@@ -58,8 +58,17 @@ if not defined GITEXE for /d %%D in ("%LOCALAPPDATA%\GitHubDesktop\app-*") do (
 if not defined GITEXE goto :nogit
 
 "%GITEXE%" rev-parse --is-inside-work-tree >nul 2>nul || goto :nogit
+
+REM Record other local changes in the report (for information only).
+>>"%REPORT%" echo.
+>>"%REPORT%" echo ----- OTHER LOCAL CHANGES ^(NOT committed by this script^) -----
+"%GITEXE%" status --short >>"%REPORT%" 2>nul
+
+REM IMPORTANT: commit ONLY synth_report.txt. GitHub Desktop stages every
+REM checked file (e.g. the 53 .xci files Vivado rewrites). A plain
+REM "git commit" would sweep all of them into the push. "--only" prevents that.
 "%GITEXE%" add -f "%REPORT%" >nul 2>nul
-"%GITEXE%" -c user.name="DeployVerifyAMC local run" -c user.email="local@localhost" commit -q -m "synth report %DATE% %TIME%" >nul 2>nul
+"%GITEXE%" -c user.name="DeployVerifyAMC local run" -c user.email="local@localhost" commit -q --only "%REPORT%" -m "synth report %DATE% %TIME%" >nul 2>nul
 "%GITEXE%" push origin HEAD
 if errorlevel 1 goto :pushfail
 echo.
