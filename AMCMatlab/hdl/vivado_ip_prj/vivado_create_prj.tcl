@@ -70,6 +70,12 @@ source vivado_custom_block_design.tcl
 
 # Use global synthesis for this project (only if the design was created)
 catch {set_property synth_checkpoint_mode None [get_files system.bd]}
+
+# Set the BD wrapper as top so the saved project is ready for synthesis
+# (batch-created projects do not always auto-set it).
+catch {make_wrapper -files [get_files system.bd] -top}
+catch {set_property top system_wrapper [get_filesets sources_1]}
+
 save_bd_design
 close_project
 

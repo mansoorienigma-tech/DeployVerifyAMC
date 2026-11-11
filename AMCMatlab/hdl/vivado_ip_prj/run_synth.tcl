@@ -10,6 +10,11 @@ cd $scriptDir
 
 open_project vivado_prj.xpr
 
+# Batch-created projects do not always auto-set the top module.
+# Set it explicitly to the BD wrapper so synthesis can run.
+catch {make_wrapper -files [get_files system.bd] -top}
+set_property top system_wrapper [get_filesets sources_1]
+
 puts "=== Starting synthesis (synth_1) ==="
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
