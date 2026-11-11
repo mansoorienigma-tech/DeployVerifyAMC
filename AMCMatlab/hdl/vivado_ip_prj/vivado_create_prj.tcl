@@ -71,12 +71,36 @@ source vivado_custom_block_design.tcl
 # Use global synthesis for this project (only if the design was created)
 catch {set_property synth_checkpoint_mode None [get_files system.bd]}
 
-# Set the BD wrapper as top so the saved project is ready for synthesis
-# (batch-created projects do not always auto-set it).
-catch {make_wrapper -files [get_files system.bd] -top}
-catch {set_property top system_wrapper [get_filesets sources_1]}
+# --- Create the HDL wrapper NOW, while the BD is freshly built ---------------
+# Creating it later (in run_synth.tcl) fails with
+#   ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL ... is locked.
+#   Locked reason(s): Block design contains locked IPs.
+# At build time the IPs have just been created from the catalog, so the BD is
+# not locked and make_wrapper succeeds.
+set bdFiles [get_files -quiet system.bd]
+if {[llength $bdFiles] > 0} {
+  if {[catch {make_wrapper -files $bdFiles -top -force} wrapMsg]} {
+    puts "OK: retrying wrapper - $wrapMsg"
+    catch {update_ip_catalog -rebuild}
+    catch {upgrade_ip [get_ips -quiet]}
+    catch {validate_bd_design}
+    if {[catch {make_wrapper -files $bdFiles -top -force} wrapMsg2]} {
+      puts "FATAL: make_wrapper failed: $wrapMsg2"
+    } else {
+      puts "OK: system_wrapper created (after IP upgrade)"
+    }
+  } else {
+    puts "OK: system_wrapper created"
+  }
+} else {
+  puts "FATAL: system.bd not found - cannot create HDL wrapper"
+}
+
+# Set the BD wrapper as top so the saved project is ready for synthesis.
+set_property top system_wrapper [get_filesets sources_1]
 
 save_bd_design
+catch {save_project}
 close_project
 
 # In batch mode Vivado exits by itself after the script finishes.

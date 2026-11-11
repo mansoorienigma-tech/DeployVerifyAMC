@@ -95,6 +95,8 @@ run_synth.bat
 | `WARNING: [Board 49-91] Board repository path ... does not exist` | مسیر مطلق قدیمی بردفایل در `.xpr` بود — **رفع شد**. اگر باز هم دیدید، بردفایل ZCU111 را در Vivado نصب کنید. |
 | `ERROR: [Common 17-55] 'set_property' expects at least one object` + `No files matched 'system.bd'` | اسکریپت قبل از ساختن دیزاین متوقف شده (معمولاً همان خطای نسخه). اول خطای نسخه را رفع کنید. |
 | خطای مسیر `E:/AMC_Projects/...` | مسیر مطلق قدیمی بود — **رفع شد**؛ حالا مسیرها نسبی هستند و روی هر کامپیوتر کار می‌کنند. |
+| `ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL ... is locked` + `module 'system_wrapper' not found` | بلاکدیزاین ذخیرهشده شامل IPهای قفلشده است (`Locked reason: BD contains locked IPs`)، پس `make_wrapper` روی پروژه بازشده جواب نمیدهد — **رفع شد**: wrapper حالا همان موقع ساخت BD (در `run_build.bat`) ساخته میشود، جایی که IPها تازه و بدون قفلاند. `run_synth.bat` هم اگر wrapper نباشد خودش پروژه را میسازد. |
+| `ERROR: [Common 17-53] Top module not set for synthesis run` | تاپ ماژول `system_wrapper` تنظیم نشده بود — **رفع شد**. |
 
 ---
 
@@ -108,6 +110,8 @@ AMCMatlab/
     vivado_ip_prj/                                           ← پروژهٔ اصلی Vivado (system)
       vivado_create_prj.tcl                                  ← اسکریپت ساخت Batch
       run_build.bat                                          ← اجرای یک‌کلیکی در ویندوز
+      run_synth.bat                                         ← سنتز، بیتاستریم و ارسال خودکار گزارش
+      send_report.bat                                       ← ساخت و push خلاصه لاگ (بدون سنتز)
       verify_project.tcl                                     ← بررسی سلامت بدون GUI
       vivado_prj.xpr                                         ← پروژهٔ Vivado 2023.2
       ipcore/tclutils/add_system.tcl                         ← Tcl ساب‌سیستم (2023.2)
@@ -122,7 +126,10 @@ add_system_original_backup.tcl                               ← بکاپ اصل
 
 ## ۷) تغییرات این برنچ
 
+- `vivado_create_prj.tcl`: **wrapper سطح بالا (`system_wrapper`) را همان موقع ساخت BD تولید میکند** تا سنتز به خطای IP قفلشده نخورد.
+- `run_synth.tcl`: بهجای `make_wrapper` روی پروژه ذخیرهشده، وجود wrapper را بررسی میکند؛ در صورت نبود، مسیر IP repo را تازه میکند، IPهای قفلشده را `upgrade_ip` میکند و سرانجام پیام روشنی میدهد.
 - `vivado_create_prj.tcl`: مسیر مطلق `E:/...` حذف و نسبی شد؛ اجرای مستقل از پوشهٔ فعلی؛ محافظت از خطاهای بردفایل؛ حذف `exit` انتهای اسکریپت (که در کنسول GUI باعث بسته‌شدن Vivado می‌شد).
 - `verify_project.tcl` و `run_build.bat`: اضافه شد (بررسی و ساخت بدون GUI).
 - `vivado_prj.xpr` و `deep_learning_ip.xpr`: مسیرهای مطلق قدیمی (`C:/Users/admin/...`) حذف شد.
 - `.gitignore`: خروجی‌های تولیدی Vivado (`*.gen`, `*.cache`, `*.runs`, ...) نادیده گرفته شد.
+- `send_report.bat`: خلاصه کوچک `vivado.log` را در `synth_report.txt` مینویسد و خودکار push میکند؛ نیازی به اسکرینشات یا کپی دستی نیست.

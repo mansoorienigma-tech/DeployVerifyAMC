@@ -32,7 +32,11 @@ if exist vivado_prj.runs\impl_1\*.bit (
 )
 >>"%REPORT%" echo.
 >>"%REPORT%" echo ----- KEY DIAGNOSTICS -----
-findstr /C:"Block design is open" /C:"No block design is open" /C:"After close" /C:"make_wrapper OK" /C:"make_wrapper failed" /C:"Synthesis status:" vivado.log >>"%REPORT%" 2>nul
+findstr /C:"OK: wrapper" /C:"OK: system_wrapper" /C:"FATAL" /C:"make_wrapper" /C:"wrapper =" /C:"Synthesis status:" /C:"Implementation status:" /C:"Report IP Status" vivado.log >>"%REPORT%" 2>nul
+if exist vivado_build.log (
+  >>"%REPORT%" echo ----- BUILD ^(wrapper creation^) DIAGNOSTICS -----
+  findstr /C:"OK: system_wrapper" /C:"FATAL" /C:"make_wrapper" /C:"ERROR:" /C:"locked" vivado_build.log >>"%REPORT%" 2>nul
+)
 >>"%REPORT%" echo.
 >>"%REPORT%" echo ----- LOCKED REASON ^(full lines^) -----
 findstr /C:"locked" /C:"Locked" /C:"LOCKED" vivado.log >>"%REPORT%" 2>nul

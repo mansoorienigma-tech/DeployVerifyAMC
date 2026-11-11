@@ -1,8 +1,9 @@
 @echo off
 REM Synthesis + implementation + bitstream in Vivado 2023.2 batch mode.
-REM Run AFTER run_build.bat. This takes a long time (hours).
-REM At the end it calls send_report.bat, which pushes a compact log summary
-REM to GitHub automatically - no screenshot or manual push needed.
+REM One double-click does everything:
+REM   - if the HDL wrapper is missing, the block design is rebuilt first
+REM   - then synthesis + implementation runs
+REM   - then send_report.bat pushes a compact log summary to GitHub
 setlocal
 set VIVADO_BIN=C:\Xilinx\Vivado\2023.2\bin
 if not exist "%VIVADO_BIN%\vivado.bat" (
@@ -11,6 +12,24 @@ if not exist "%VIVADO_BIN%\vivado.bat" (
   exit /b 1
 )
 cd /d "%~dp0"
+
+REM The wrapper must be created while the BD is freshly built and unlocked.
+set "WRAP_FOUND="
+for %%P in (
+  "vivado_prj.gen\sources_1\bd\system\hdl\system_wrapper.v"
+  "vivado_prj.gen\sources_1\bd\system\hdl\system_wrapper.vhd"
+  "vivado_prj.srcs\sources_1\bd\system\hdl\system_wrapper.v"
+  "vivado_prj.srcs\sources_1\bd\system\hdl\system_wrapper.vhd"
+) do if exist %%P set "WRAP_FOUND=1"
+
+if not defined WRAP_FOUND (
+  echo No system_wrapper found - rebuilding the block design first ^(2-5 min^).
+  call "%VIVADO_BIN%\vivado.bat" -mode batch -notrace -source vivado_create_prj.tcl
+  copy /y vivado.log vivado_build.log >nul 2>nul
+) else (
+  echo system_wrapper found - skipping block design rebuild.
+)
+
 echo Starting synthesis + implementation... this takes a LONG time.
 call "%VIVADO_BIN%\vivado.bat" -mode batch -notrace -source run_synth.tcl
 echo.
