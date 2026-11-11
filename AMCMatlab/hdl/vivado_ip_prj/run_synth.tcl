@@ -13,16 +13,24 @@ cd $scriptDir
 open_project vivado_prj.xpr
 
 # If the block design is open it is locked and cannot generate a wrapper.
-# Close it first.
+# Close it first (try both name and object forms).
 set curBD [current_bd_design -quiet]
 if {$curBD ne ""} {
-  puts "Closing open block design: $curBD"
+  puts "Block design is open ($curBD) - closing it."
+  catch {close_bd_design [get_bd_designs $curBD]}
   catch {close_bd_design $curBD}
+  puts "After close, current_bd_design = [current_bd_design -quiet]"
+} else {
+  puts "No block design is open in this session."
 }
 
 # Batch-created projects do not always auto-set the top module.
 # Set it explicitly to the BD wrapper so synthesis can run.
-catch {make_wrapper -files [get_files system.bd] -top}
+if {[catch {make_wrapper -files [get_files system.bd] -top} msg]} {
+  puts "make_wrapper failed: $msg"
+} else {
+  puts "make_wrapper OK"
+}
 set_property top system_wrapper [get_filesets sources_1]
 
 puts "=== Starting synthesis (synth_1) ==="
