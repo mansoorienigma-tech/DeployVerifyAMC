@@ -16,8 +16,15 @@ echo ================= Finished =================
 if exist vivado_prj.runs\impl_1\*.bit (
   echo RESULT: OK - bitstream created in vivado_prj.runs\impl_1
 ) else (
-  echo RESULT: FAILED - bitstream not found. Check vivado.log
+  echo RESULT: FAILED - bitstream not found.
+  echo.
+  echo ===== COPY THE LINES BELOW AND SEND THEM TO THE AGENT =====
+  findstr /C:"Block design is open" /C:"No block design is open" /C:"After close" /C:"make_wrapper OK" /C:"make_wrapper failed" /C:"Synthesis status:" vivado.log
+  echo ----- LOCKED REASON (full line) -----
+  findstr /C:"locked" /C:"Locked" vivado.log
+  echo ----- ERRORS -----
   findstr /C:"ERROR:" vivado.log
+  echo ===== END OF LINES TO SEND =====
 )
 pause
 endlocal
