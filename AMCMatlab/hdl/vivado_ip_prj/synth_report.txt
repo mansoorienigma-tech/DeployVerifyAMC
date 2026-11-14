@@ -1,11 +1,12 @@
 ===== DeployVerifyAMC / Vivado 2023.2 - synthesis report =====
-Generated: Wed 11/11/2026 15:04:51.58
+Generated: Sat 11/14/2026 17:22:03.95
 Computer:  K55VD
 RESULT: FAILED - bitstream not found
 
 ----- KEY DIAGNOSTICS -----
 FATAL: no system_wrapper HDL found in the project.
-FATAL: make_wrapper failed: ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
+make_wrapper: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2507.648 ; gain = 60.422
+OK: system_wrapper regenerated
 FATAL: system_wrapper still missing.
 FATAL: synthesis skipped because the top-level wrapper is missing.
 
@@ -13,55 +14,43 @@ FATAL: synthesis skipped because the top-level wrapper is missing.
 WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
 List of locked IPs:
        Repair attempt: refresh IP repos + upgrade locked IPs.
-CRITICAL WARNING: [filemgmt 20-1366] Unable to reset target(s) for the following file is locked: C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/system.bd
-Locked reason: 
-* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
-List of locked IPs: 
-ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
-* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
-List of locked IPs: 
-ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL for the block design 'system.bd' is locked. Locked reason(s):
-* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
-List of locked IPs: 
 
 ----- ALL ERROR LINES -----
-ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
-ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL for the block design 'system.bd' is locked. Locked reason(s):
-FATAL: make_wrapper failed: ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
 
 ----- LAST 30 LINES OF vivado.log -----
-Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_2
-Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
-Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
-Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
-Successfully read diagram <system> from block design file <C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.srcs/sources_1/bd/system/system.bd>
-open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2353.852 ; gain = 0.062
-ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
-* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
-List of locked IPs: 
-system_s00_mmu_0
-system_auto_ds_3
-system_s01_mmu_0
-system_auto_ds_4
-
-ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL for the block design 'system.bd' is locked. Locked reason(s):
-* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
-List of locked IPs: 
-system_s00_mmu_0
-system_auto_ds_3
-system_s01_mmu_0
-system_auto_ds_4
-
-FATAL: make_wrapper failed: ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
-
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_reg/xbar/s_axi_arid'(2) to pin: '/axi_intc_reg/s01_couplers/M_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_dlproc/xbar/m_axi_bid'(2) to pin: '/axi_interconnect_dlproc/m00_couplers/S_AXI_bid'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_dlproc/xbar/m_axi_rid'(2) to pin: '/axi_interconnect_dlproc/m00_couplers/S_AXI_rid'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps/saxigp2_awid'(6) to pin: '/axi_intc_hp0/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps/saxigp2_arid'(6) to pin: '/axi_intc_hp0/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dlprocessor_0/AXI4_AWID'(12) to pin: '/axi_interconnect_dlproc/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dlprocessor_0/AXI4_ARID'(12) to pin: '/axi_interconnect_dlproc/M00_AXI_arid'(2) - Only lower order bits will be connected.
+Verilog Output written to : c:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/synth/system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_hp0/xbar/m_axi_bid'(1) to pin: '/axi_intc_hp0/m00_couplers/S_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_hp0/xbar/m_axi_rid'(1) to pin: '/axi_intc_hp0/m00_couplers/S_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_jtag/xbar/m_axi_bid'(1) to pin: '/axi_intc_jtag/m01_couplers/S_AXI_bid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_jtag/xbar/m_axi_rid'(1) to pin: '/axi_intc_jtag/m01_couplers/S_AXI_rid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_reg/xbar/s_axi_awid'(2) to pin: '/axi_intc_reg/s01_couplers/M_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_intc_reg/xbar/s_axi_arid'(2) to pin: '/axi_intc_reg/s01_couplers/M_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_dlproc/xbar/m_axi_bid'(2) to pin: '/axi_interconnect_dlproc/m00_couplers/S_AXI_bid'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_dlproc/xbar/m_axi_rid'(2) to pin: '/axi_interconnect_dlproc/m00_couplers/S_AXI_rid'(12) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps/saxigp2_awid'(6) to pin: '/axi_intc_hp0/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/zynq_ultra_ps/saxigp2_arid'(6) to pin: '/axi_intc_hp0/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dlprocessor_0/AXI4_AWID'(12) to pin: '/axi_interconnect_dlproc/M00_AXI_awid'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/dlprocessor_0/AXI4_ARID'(12) to pin: '/axi_interconnect_dlproc/M00_AXI_arid'(2) - Only lower order bits will be connected.
+Verilog Output written to : c:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : c:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/hdl/system_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2507.648 ; gain = 60.422
+OK: system_wrapper regenerated
 FATAL: system_wrapper still missing.
        FIX: run run_build.bat once (it creates the wrapper),
        then run run_synth.bat again.
 FATAL: synthesis skipped because the top-level wrapper is missing.
 === Synthesis/implementation finished ===
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 11 15:04:49 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 14 17:22:01 2026...
 
 ----- OTHER LOCAL CHANGES (NOT committed by this script) -----
+ M synth_report.txt
  M vivado_prj.srcs/sources_1/bd/system/ip/system_AXIS2AXIM_0_0/system_AXIS2AXIM_0_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1.xci
@@ -73,6 +62,8 @@ INFO: [Common 17-206] Exiting Vivado at Wed Nov 11 15:04:49 2026...
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_ds_0/system_auto_ds_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_ds_1/system_auto_ds_1.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_ds_2/system_auto_ds_2.xci
+ M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_ds_3/system_auto_ds_3.xci
+ M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_ds_4/system_auto_ds_4.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2.xci
@@ -96,7 +87,10 @@ INFO: [Common 17-206] Exiting Vivado at Wed Nov 11 15:04:49 2026...
  M vivado_prj.srcs/sources_1/bd/system/ip/system_axi_dl_s2mm_0/system_axi_dl_s2mm_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_dlprocessor_0_0/system_dlprocessor_0_0.xci
+ M vivado_prj.srcs/sources_1/bd/system/ip/system_jtag_axi_0/system_jtag_axi_0.xci
+ M vivado_prj.srcs/sources_1/bd/system/ip/system_s00_mmu_0/system_s00_mmu_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_s00_mmu_1/system_s00_mmu_1.xci
+ M vivado_prj.srcs/sources_1/bd/system/ip/system_s01_mmu_0/system_s01_mmu_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_s01_mmu_1/system_s01_mmu_1.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_s03_mmu_0/system_s03_mmu_0.xci
  M vivado_prj.srcs/sources_1/bd/system/ip/system_s04_mmu_0/system_s04_mmu_0.xci
@@ -110,4 +104,3 @@ INFO: [Common 17-206] Exiting Vivado at Wed Nov 11 15:04:49 2026...
  M vivado_prj.srcs/sources_1/bd/system/ip/system_xbar_4/system_xbar_4.xci
  M vivado_prj.srcs/sources_1/bd/system/system.bd
  M vivado_prj.xpr
-?? synth_report.txt
