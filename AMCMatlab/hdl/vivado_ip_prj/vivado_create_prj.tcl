@@ -77,27 +77,45 @@ catch {set_property synth_checkpoint_mode None [get_files system.bd]}
 #   Locked reason(s): Block design contains locked IPs.
 # At build time the IPs have just been created from the catalog, so the BD is
 # not locked and make_wrapper succeeds.
+#
+# IMPORTANT: make_wrapper only WRITES the HDL file. It does NOT register it in
+# the project - add_files -norecurse on the returned path is mandatory. Without
+# it Vivado reports [Synth 8-439] module 'system_wrapper' not found.
 set bdFiles [get_files -quiet system.bd]
+set wrapPath ""
 if {[llength $bdFiles] > 0} {
-  if {[catch {make_wrapper -files $bdFiles -top -force} wrapMsg]} {
-    puts "OK: retrying wrapper - $wrapMsg"
+  if {[catch {make_wrapper -files $bdFiles -top -force} wrapPath]} {
+    puts "WARNING: make_wrapper failed, upgrading IPs and retrying: $wrapPath"
+    set wrapPath ""
     catch {update_ip_catalog -rebuild}
     catch {upgrade_ip [get_ips -quiet]}
     catch {validate_bd_design}
-    if {[catch {make_wrapper -files $bdFiles -top -force} wrapMsg2]} {
-      puts "FATAL: make_wrapper failed: $wrapMsg2"
-    } else {
-      puts "OK: system_wrapper created (after IP upgrade)"
+    if {[catch {make_wrapper -files $bdFiles -top -force} wrapPath]} {
+      puts "FATAL: make_wrapper failed: $wrapPath"
+      set wrapPath ""
     }
-  } else {
-    puts "OK: system_wrapper created"
+  }
+  if {$wrapPath ne ""} {
+    puts "OK: system_wrapper HDL created: $wrapPath"
+    if {[file exists $wrapPath]} {
+      if {[catch {add_files -norecurse $wrapPath} addMsg]} {
+        puts "FATAL: add_files wrapper failed: $addMsg"
+      } else {
+        puts "OK: wrapper added to project sources"
+      }
+    }
   }
 } else {
   puts "FATAL: system.bd not found - cannot create HDL wrapper"
 }
 
 # Set the BD wrapper as top so the saved project is ready for synthesis.
-set_property top system_wrapper [get_filesets sources_1]
+if {$wrapPath ne ""} {
+  set_property top system_wrapper [get_filesets sources_1]
+  catch {update_compile_order -fileset sources_1}
+} else {
+  puts "FATAL: top module NOT set - synthesis cannot run."
+}
 
 save_bd_design
 catch {save_project}

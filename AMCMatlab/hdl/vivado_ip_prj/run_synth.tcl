@@ -4,10 +4,11 @@
 #   vivado -mode batch -notrace -source run_synth.tcl
 # NOTE: this takes a long time (hours) and a lot of RAM on a small PC.
 #
-# The HDL wrapper (system_wrapper) is created by run_build.bat. Here we only
-# VERIFY it exists and set it as top - we no longer call make_wrapper on the
-# saved project, because that project can report
-#   [BD 41-1665] ... 'system.bd' is locked / contains locked IPs.
+# IMPORTANT (fixed 2026-11-14): make_wrapper CREATES system_wrapper.v on disk
+# but does NOT register it in the project. It must be added with
+#   add_files -norecurse [make_wrapper ...]
+# otherwise "set_property top system_wrapper" points at a module Vivado cannot
+# find and synthesis fails with [Synth 8-439] module 'system_wrapper' not found.
 # ============================================================================
 
 set scriptDir [file normalize [file dirname [info script]]]
@@ -15,21 +16,36 @@ cd $scriptDir
 
 open_project vivado_prj.xpr
 
-# --- Locate the wrapper file -------------------------------------------------
-proc find_wrapper {} {
+# --- Find the wrapper: in the project file list, or on disk ------------------
+proc find_wrapper {scriptDir} {
   foreach f [get_files -quiet -all] {
     if {[string match {*system_wrapper*} $f] && [file exists $f]} {
       return $f
     }
   }
+  # make_wrapper writes here but does not add the file to the project.
+  foreach sub [list \
+      [file join "vivado_prj.gen" "sources_1" "bd" "system" "hdl"] \
+      [file join "vivado_prj.srcs" "sources_1" "bd" "system" "hdl"]] {
+    foreach f [glob -nocomplain -directory [file join $scriptDir $sub] system_wrapper.*] {
+      if {[file exists $f]} {
+        puts "OK: found wrapper on disk, registering it: $f"
+        if {[catch {add_files -norecurse $f} addMsg]} {
+          puts "FATAL: could not register wrapper: $addMsg"
+        } else {
+          puts "OK: wrapper added to project sources"
+        }
+        return $f
+      }
+    }
+  }
   return ""
 }
 
-set wrapFile [find_wrapper]
+set wrapFile [find_wrapper $scriptDir]
 
 if {$wrapFile eq ""} {
-  puts "FATAL: no system_wrapper HDL found in the project."
-  puts "       Repair attempt: refresh IP repos + upgrade locked IPs."
+  puts "FATAL: no system_wrapper HDL found. Repairing (refresh repos + upgrade locked IPs)."
   set repo1 [file normalize [file join $scriptDir "ipcore"]]
   set repo2 [file normalize [file join $scriptDir ".." ".." ".." "matlab code for vivido ip" "genericipcore" "ipcore" "GenericProcessor_v1_0"]]
   catch {set_property ip_repo_paths [list $repo1 $repo2] [current_fileset]}
@@ -43,24 +59,32 @@ if {$wrapFile eq ""} {
   if {[llength $bdFiles] > 0} {
     catch {open_bd_design $bdFiles}
     catch {validate_bd_design}
-    if {[catch {make_wrapper -files $bdFiles -top -force} m]} {
-      puts "FATAL: make_wrapper failed: $m"
+    if {[catch {make_wrapper -files $bdFiles -top -force} wrapPath]} {
+      puts "FATAL: make_wrapper failed: $wrapPath"
     } else {
-      puts "OK: system_wrapper regenerated"
+      puts "OK: system_wrapper regenerated: $wrapPath"
+      # CRITICAL: register the generated wrapper in the project.
+      if {[file exists $wrapPath]} {
+        if {[catch {add_files -norecurse $wrapPath} addMsg]} {
+          puts "FATAL: add_files wrapper failed: $addMsg"
+        } else {
+          puts "OK: wrapper added to project sources"
+        }
+      }
     }
   }
-  set wrapFile [find_wrapper]
+  set wrapFile [find_wrapper $scriptDir]
 }
 
 set wrapOk [expr {$wrapFile ne ""}]
 if {$wrapOk} {
   puts "OK: wrapper = $wrapFile"
   set_property top system_wrapper [get_filesets sources_1]
+  catch {update_compile_order -fileset sources_1}
   catch {save_project}
 } else {
   puts "FATAL: system_wrapper still missing."
-  puts "       FIX: run run_build.bat once (it creates the wrapper),"
-  puts "       then run run_synth.bat again."
+  puts "       FIX: run run_build.bat once, then run run_synth.bat again."
 }
 
 if {$wrapOk} {

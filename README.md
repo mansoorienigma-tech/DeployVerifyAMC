@@ -98,6 +98,7 @@ run_synth.bat
 | `ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL ... is locked` + `module 'system_wrapper' not found` | بلاکدیزاین ذخیرهشده شامل IPهای قفلشده است (`Locked reason: BD contains locked IPs`)، پس `make_wrapper` روی پروژه بازشده جواب نمیدهد — **رفع شد**: wrapper حالا همان موقع ساخت BD (در `run_build.bat`) ساخته میشود، جایی که IPها تازه و بدون قفلاند. `run_synth.bat` هم اگر wrapper نباشد خودش پروژه را میسازد. |
 | GitHub Desktop مدام دهها فایل `.xci` و `vivado_prj.xpr` را تغییر یافته نشان میدهد | اینها خروجی تولیدشده Vivado هستند (پایان خطها و پارامتر `INSERT_VIP`) و نباید کامیت شوند. روی `discard_generated.bat` دابلکلیک کنید یا در GitHub Desktop از منوی Changes گزینه Discard all changes را بزنید. `send_report.bat` هم فقط خود report را کامیت میکند، نه این فایلها را. |
 | `ERROR: [Common 17-53] Top module not set for synthesis run` | تاپ ماژول `system_wrapper` تنظیم نشده بود — **رفع شد**. |
+| `Verilog Output written to .../system_wrapper.v` ولی `module 'system_wrapper' not found` | `make_wrapper` فایل HDL را مینویسد ولی **به پروژه اضافه نمیکند** — **رفع شد**: حالا بلافاصله `add_files -norecurse` روی مسیر برگشتی اجرا میشود و فایل در `vivado_prj.xpr` ثبت میگردد. |
 
 ---
 

@@ -22,6 +22,11 @@ for %%P in (
   "vivado_prj.srcs\sources_1\bd\system\hdl\system_wrapper.vhd"
 ) do if exist %%P set "WRAP_FOUND=1"
 
+REM The file existing on disk is not enough: it must also be registered in the
+REM project. If .xpr has no reference to system_wrapper.v, rebuild once.
+findstr /C:"system_wrapper.v" vivado_prj.xpr >nul 2>nul
+if errorlevel 1 set "WRAP_FOUND="
+
 if not defined WRAP_FOUND (
   echo No system_wrapper found - rebuilding the block design first ^(2-5 min^).
   call "%VIVADO_BIN%\vivado.bat" -mode batch -notrace -source vivado_create_prj.tcl

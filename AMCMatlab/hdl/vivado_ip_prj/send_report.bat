@@ -32,7 +32,7 @@ if exist vivado_prj.runs\impl_1\*.bit (
 )
 >>"%REPORT%" echo.
 >>"%REPORT%" echo ----- KEY DIAGNOSTICS -----
-findstr /C:"OK: wrapper" /C:"OK: system_wrapper" /C:"FATAL" /C:"make_wrapper" /C:"wrapper =" /C:"Synthesis status:" /C:"Implementation status:" /C:"Report IP Status" vivado.log >>"%REPORT%" 2>nul
+findstr /C:"OK: wrapper" /C:"OK: system_wrapper" /C:"wrapper added" /C:"FATAL" /C:"make_wrapper" /C:"wrapper =" /C:"top module" /C:"Synthesis status:" /C:"Implementation status:" /C:"Report IP Status" vivado.log >>"%REPORT%" 2>nul
 if exist vivado_build.log (
   >>"%REPORT%" echo ----- BUILD ^(wrapper creation^) DIAGNOSTICS -----
   findstr /C:"OK: system_wrapper" /C:"FATAL" /C:"make_wrapper" /C:"ERROR:" /C:"locked" vivado_build.log >>"%REPORT%" 2>nul
