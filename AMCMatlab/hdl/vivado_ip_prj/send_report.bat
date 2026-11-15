@@ -46,6 +46,23 @@ findstr /C:"ERROR:" vivado.log >>"%REPORT%" 2>nul
 >>"%REPORT%" echo.
 >>"%REPORT%" echo ----- LAST 30 LINES OF vivado.log -----
 powershell -NoProfile -Command "Get-Content 'vivado.log' -Tail 30" >>"%REPORT%" 2>nul
+
+REM The actual synthesis/implementation messages live in runme.log, NOT in
+REM vivado.log. Include them so a failed run can be diagnosed from the report.
+for %%R in (synth_1 impl_1) do (
+  >>"%REPORT%" echo.
+  >>"%REPORT%" echo ================= %%R / runme.log =================
+  if exist vivado_prj.runs\%%R\runme.log (
+    >>"%REPORT%" echo ----- %%R ERRORS / CRITICAL WARNINGS -----
+    findstr /C:"ERROR:" /C:"CRITICAL WARNING" /C:"ERROR" vivado_prj.runs\%%R\runme.log >>"%REPORT%" 2>nul
+    >>"%REPORT%" echo ----- %%R LAST 40 LINES -----
+    powershell -NoProfile -Command "Get-Content 'vivado_prj.runs\%%R\runme.log' -Tail 40" >>"%REPORT%" 2>nul
+  ) else (
+    >>"%REPORT%" echo runme.log not found - this run did not start.
+  )
+  >>"%REPORT%" echo ----- %%R FILES -----
+  dir /b vivado_prj.runs\%%R >>"%REPORT%" 2>nul
+)
 echo Report written: %REPORT%
 
 REM ---- locate git (PATH, Git for Windows, or GitHub Desktop bundled git) ----
