@@ -88,6 +88,16 @@ if {$wrapOk} {
 }
 
 if {$wrapOk} {
+  # If a previous synthesis was interrupted (Vivado killed / PC restarted),
+  # launch_runs refuses with [Common 17-69]: "Run 'synth_1' needs to be reset
+  # before launching". Reset both runs so this script is always re-runnable.
+  if {[catch {reset_run synth_1} rm1]} {
+    puts "Note: reset_run synth_1: $rm1"
+  } else {
+    puts "OK: reset_run synth_1"
+  }
+  catch {reset_run impl_1}
+
   puts "=== Starting synthesis (synth_1) ==="
   launch_runs synth_1 -jobs 2
   catch {wait_on_run synth_1}

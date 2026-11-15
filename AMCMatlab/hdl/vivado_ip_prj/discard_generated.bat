@@ -27,10 +27,13 @@ if not defined GITEXE (
 
 echo Discarding Vivado-generated changes in:
 echo   vivado_prj.xpr
-echo   vivado_prj.srcs\  ^(the .xci IP files^)
+echo   vivado_prj.srcs\  ^(the .xci IP files and the .ui layout file^)
+echo   ipcore\         ^(component.xml / .xpr rewritten by update_ip_catalog^)
 echo.
-"%GITEXE%" reset -q HEAD -- vivado_prj.xpr vivado_prj.srcs
-"%GITEXE%" checkout -q -- vivado_prj.xpr vivado_prj.srcs
+"%GITEXE%" reset -q HEAD -- vivado_prj.xpr vivado_prj.srcs ipcore
+"%GITEXE%" checkout -q -- vivado_prj.xpr vivado_prj.srcs ipcore
+REM Crash dump left behind when Vivado is killed mid-run (Java VM).
+del /q hs_err_pid*.dmp 2>nul
 echo Done. Remaining changes:
 "%GITEXE%" status --short
 echo.
