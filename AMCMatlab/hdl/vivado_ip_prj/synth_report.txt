@@ -1,47 +1,52 @@
 ===== DeployVerifyAMC / Vivado 2023.2 - synthesis report =====
-Generated: Sun 11/15/2026 11:31:19.24
+Generated: Sun 11/15/2026 18:16:58.53
 Computer:  K55VD
 RESULT: FAILED - bitstream not found
 
 ----- KEY DIAGNOSTICS -----
 OK: wrapper = C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/hdl/system_wrapper.v
+OK: reset_run synth_1
+Synthesis status: synth_design Complete!
+Implementation status: route_design Complete!
 ----- BUILD (wrapper creation) DIAGNOSTICS -----
-make_wrapper: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2743.961 ; gain = 23.934
+make_wrapper: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2742.141 ; gain = 22.059
 OK: system_wrapper HDL created: c:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/hdl/system_wrapper.v
 
 ----- LOCKED REASON (full lines) -----
 
 ----- ALL ERROR LINES -----
-ERROR: [Common 17-69] Command failed:  Run 'synth_1' needs to be reset before launching. The run can be reset using the Tcl command 'reset_run synth_1'.
 
 ----- LAST 30 LINES OF vivado.log -----
-#-----------------------------------------------------------
-# Vivado v2023.2 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
-# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Nov 15 11:30:14 2026
-# Process ID: 7812
-# Current directory: C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj
-# Command line: vivado.exe -mode batch -notrace -source run_synth.tcl
-# Log file: C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado.log
-# Journal file: C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj\vivado.jou
-# Running On: K55VD, OS: Windows, CPU Frequency: 2494 MHz, CPU Physical cores: 2, Host memory: 12764 MB
-#-----------------------------------------------------------
-source run_synth.tcl -notrace
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/ipcore'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/admin/Documents/GitHub/DeployVerifyAMC/matlab code for vivido ip/genericipcore/ipcore/GenericProcessor_v1_0'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
-WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
-open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 679.348 ; gain = 293.543
-OK: wrapper = C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/hdl/system_wrapper.v
-=== Starting synthesis (synth_1) ===
-ERROR: [Common 17-69] Command failed:  Run 'synth_1' needs to be reset before launching. The run can be reset using the Tcl command 'reset_run synth_1'.
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 11:31:18 2026...
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:02:17 ; elapsed = 00:01:28 . Memory (MB): peak = 15298.191 ; gain = 247.031
+INFO: [runtcl-4] Executing : report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 15325.508 ; gain = 27.316
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_routed.rpt -pb system_wrapper_bus_skew_routed.pb -rpx system_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 15380.215 ; gain = 52.691
+Wrote PlaceDB: Time (s): cpu = 00:03:35 ; elapsed = 00:01:30 . Memory (MB): peak = 15441.926 ; gain = 114.402
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.065 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:04:07 ; elapsed = 00:01:46 . Memory (MB): peak = 15441.926 ; gain = 114.402
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.runs/impl_1/system_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:06:52 ; elapsed = 00:04:50 . Memory (MB): peak = 15441.926 ; gain = 116.418
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 18:16:24 2026...
+[Sun Nov 15 18:16:45 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:38 ; elapsed = 03:39:52 . Memory (MB): peak = 2093.949 ; gain = 0.000
+Implementation status: route_design Complete!
+=== Synthesis/implementation finished ===
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 18:16:48 2026...
 
 ----- OTHER LOCAL CHANGES (NOT committed by this script) -----
  M ipcore/analogdevices-dmac/library/axi_dmac/axi_dmac.xpr
@@ -109,4 +114,3 @@ INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 11:31:18 2026...
  M vivado_prj.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_0/system_zynq_ultra_ps_0.xci
  D vivado_prj.srcs/sources_1/bd/system/ui/bd_c954508f.ui
  M vivado_prj.xpr
-?? hs_err_pid7616.dmp
