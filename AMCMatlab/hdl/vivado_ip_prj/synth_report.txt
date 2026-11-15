@@ -1,5 +1,5 @@
 ===== DeployVerifyAMC / Vivado 2023.2 - synthesis report =====
-Generated: Sun 11/15/2026 18:16:58.53
+Generated: Sun 11/15/2026 19:07:17.29
 Computer:  K55VD
 RESULT: FAILED - bitstream not found
 
@@ -47,6 +47,190 @@ wait_on_runs: Time (s): cpu = 00:00:38 ; elapsed = 03:39:52 . Memory (MB): peak 
 Implementation status: route_design Complete!
 === Synthesis/implementation finished ===
 INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 18:16:48 2026...
+
+================= synth_1 / runme.log =================
+----- synth_1 ERRORS / CRITICAL WARNINGS -----
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} '. The existing rule will be replaced.
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+----- synth_1 LAST 40 LINES -----
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/plle_loop[1].gen_plle4.PLLE4_BASE_INST_OTHER with COMPENSATION=INTERNAL is optimized away to aid design routability
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/plle_loop[2].gen_plle4.PLLE4_BASE_INST_OTHER with COMPENSATION=INTERNAL is optimized away to aid design routability
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.501 . Memory (MB): peak = 14449.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4886 instances were transformed.
+  (CARRY4) => CARRY8: 2008 instances
+  BUFG => BUFGCE: 13 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 215 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 272 instances
+  FDE => FDRE: 730 instances
+  FDR => FDRE: 113 instances
+  FDS => FDSE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  MULT_AND => LUT2: 1 instance 
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 64 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 138 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 301 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 645 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 8 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 2 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 90 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 165 instances
+  SRL16 => SRL16E: 6 instances
+
+The system cannot find the path specified.
+Synth Design complete | Checksum: e0d30fa6
+INFO: [Common 17-83] Releasing license: Synthesis
+7107 Infos, 809 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 02:13:21 ; elapsed = 02:20:18 . Memory (MB): peak = 14449.539 ; gain = 13769.977
+Write ShapeDB Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 14449.539 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.runs/synth_1/system_wrapper.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:06:35 ; elapsed = 00:06:03 . Memory (MB): peak = 14449.539 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 14:36:30 2026...
+----- synth_1 FILES -----
+.vivado.begin.rst
+.vivado.end.rst
+.Vivado_Synthesis.queue.rst
+.Xil
+dont_touch.xdc
+gen_run.xml
+htr.txt
+ISEWrap.js
+ISEWrap.sh
+project.wdf
+rundef.js
+runme.bat
+runme.log
+runme.sh
+system_wrapper.dcp
+system_wrapper.tcl
+system_wrapper.vds
+system_wrapper_utilization_synth.pb
+system_wrapper_utilization_synth.rpt
+vivado.jou
+vivado.pb
+__synthesis_is_complete__
+
+================= impl_1 / runme.log =================
+----- impl_1 ERRORS / CRITICAL WARNINGS -----
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} '. The existing rule will be replaced.
+----- impl_1 LAST 40 LINES -----
+report_methodology: Time (s): cpu = 00:20:21 ; elapsed = 00:12:46 . Memory (MB): peak = 14714.883 ; gain = 761.695
+INFO: [runtcl-4] Executing : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+Command: report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+204 Infos, 349 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:13:53 ; elapsed = 00:10:15 . Memory (MB): peak = 15029.066 ; gain = 314.184
+INFO: [runtcl-4] Executing : report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb
+report_route_status: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 15051.160 ; gain = 22.094
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:02:17 ; elapsed = 00:01:28 . Memory (MB): peak = 15298.191 ; gain = 247.031
+INFO: [runtcl-4] Executing : report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:49 ; elapsed = 00:00:56 . Memory (MB): peak = 15325.508 ; gain = 27.316
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_routed.rpt -pb system_wrapper_bus_skew_routed.pb -rpx system_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 15380.215 ; gain = 52.691
+Wrote PlaceDB: Time (s): cpu = 00:03:35 ; elapsed = 00:01:30 . Memory (MB): peak = 15441.926 ; gain = 114.402
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.065 . Memory (MB): peak = 15441.926 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:04:07 ; elapsed = 00:01:46 . Memory (MB): peak = 15441.926 ; gain = 114.402
+INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.runs/impl_1/system_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:06:52 ; elapsed = 00:04:50 . Memory (MB): peak = 15441.926 ; gain = 116.418
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 18:16:24 2026...
+----- impl_1 FILES -----
+.cache
+.init_design.begin.rst
+.init_design.end.rst
+.opt_design.begin.rst
+.opt_design.end.rst
+.phys_opt_design.begin.rst
+.phys_opt_design.end.rst
+.place_design.begin.rst
+.place_design.end.rst
+.route_design.begin.rst
+.route_design.end.rst
+.tmpCRC
+.vivado.begin.rst
+.vivado.end.rst
+.Vivado_Implementation.queue.rst
+.Xil
+clockInfo.txt
+gen_run.xml
+htr.txt
+init_design.pb
+ISEWrap.js
+ISEWrap.sh
+opt_design.pb
+phys_opt_design.pb
+place_design.pb
+project.wdf
+route_design.pb
+rundef.js
+runme.bat
+runme.log
+runme.sh
+system_wrapper.tcl
+system_wrapper.vdi
+system_wrapper_bus_skew_routed.pb
+system_wrapper_bus_skew_routed.rpt
+system_wrapper_bus_skew_routed.rpx
+system_wrapper_clock_utilization_routed.rpt
+system_wrapper_control_sets_placed.rpt
+system_wrapper_drc_opted.pb
+system_wrapper_drc_opted.rpt
+system_wrapper_drc_opted.rpx
+system_wrapper_drc_routed.pb
+system_wrapper_drc_routed.rpt
+system_wrapper_drc_routed.rpx
+system_wrapper_io_placed.rpt
+system_wrapper_methodology_drc_routed.pb
+system_wrapper_methodology_drc_routed.rpt
+system_wrapper_methodology_drc_routed.rpx
+system_wrapper_opt.dcp
+system_wrapper_physopt.dcp
+system_wrapper_placed.dcp
+system_wrapper_power_routed.rpt
+system_wrapper_power_routed.rpx
+system_wrapper_power_summary_routed.pb
+system_wrapper_routed.dcp
+system_wrapper_route_status.pb
+system_wrapper_route_status.rpt
+system_wrapper_timing_summary_routed.pb
+system_wrapper_timing_summary_routed.rpt
+system_wrapper_timing_summary_routed.rpx
+system_wrapper_utilization_placed.pb
+system_wrapper_utilization_placed.rpt
+vivado.jou
+vivado.pb
 
 ----- OTHER LOCAL CHANGES (NOT committed by this script) -----
  M ipcore/analogdevices-dmac/library/axi_dmac/axi_dmac.xpr
