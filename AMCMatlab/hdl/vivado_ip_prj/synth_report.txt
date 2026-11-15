@@ -1,5 +1,5 @@
 ===== DeployVerifyAMC / Vivado 2023.2 - synthesis report =====
-Generated: Sun 11/15/2026 11:27:44.42
+Generated: Sun 11/15/2026 11:31:19.24
 Computer:  K55VD
 RESULT: FAILED - bitstream not found
 
@@ -20,8 +20,8 @@ ERROR: [Common 17-69] Command failed:  Run 'synth_1' needs to be reset before la
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sun Nov 15 11:26:17 2026
-# Process ID: 11216
+# Start of session at: Sun Nov 15 11:30:14 2026
+# Process ID: 7812
 # Current directory: C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj
 # Command line: vivado.exe -mode batch -notrace -source run_synth.tcl
 # Log file: C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado.log
@@ -37,11 +37,11 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/admin/Documents/GitH
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
 WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
 WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
-open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:58 . Memory (MB): peak = 680.426 ; gain = 294.121
+open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 679.348 ; gain = 293.543
 OK: wrapper = C:/Users/admin/Documents/GitHub/DeployVerifyAMC/AMCMatlab/hdl/vivado_ip_prj/vivado_prj.gen/sources_1/bd/system/hdl/system_wrapper.v
 === Starting synthesis (synth_1) ===
 ERROR: [Common 17-69] Command failed:  Run 'synth_1' needs to be reset before launching. The run can be reset using the Tcl command 'reset_run synth_1'.
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 11:27:43 2026...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 15 11:31:18 2026...
 
 ----- OTHER LOCAL CHANGES (NOT committed by this script) -----
  M ipcore/analogdevices-dmac/library/axi_dmac/axi_dmac.xpr
