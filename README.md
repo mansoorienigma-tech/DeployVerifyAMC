@@ -115,6 +115,7 @@ AMCMatlab/
       run_build.bat                                          ← اجرای یک‌کلیکی در ویندوز
       run_synth.bat                                         ← سنتز، بیتاستریم و ارسال خودکار گزارش
       send_report.bat                                       ← ساخت و push خلاصه لاگ (بدون سنتز)
+      check_progress.bat                                   ← عکس لحظهای پیشرفت سنتز (بدون توقف آن)
       discard_generated.bat                                ← پاک کردن تغییرات فایلهای تولیدی Vivado
       verify_project.tcl                                     ← بررسی سلامت بدون GUI
       vivado_prj.xpr                                         ← پروژهٔ Vivado 2023.2
