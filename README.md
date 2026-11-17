@@ -6,6 +6,22 @@
 
 ---
 
+## ✅ نتیجهٔ اجرای کامل (راستیآزمایی شد)
+
+جریان کامل روی **Vivado 2023.2** و یک سیستم ۲ هستهای / ۱۲ گیگ RAM اجرا و تأیید شد:
+
+| مرحله | نتیجه |
+|---|---|
+| ساخت بلاکدیزاین `system` | `RESULT: OK` |
+| سنتز `synth_1` | `synth_design Complete!` — **۰ خطا** |
+| پیادهسازی `impl_1` | `route_design Complete!` — **۰ خطا** |
+| `write_bitstream` | `Bitgen Completed Successfully` — **۰ خطا** |
+| خروجی | `vivado_prj.runs/impl_1/system_wrapper.bit` |
+
+فایل بیتاستریم جزو خروجیهای تولیدی است و طبق `.gitignore` وارد گیت نمیشود. DRC و Timing هشدارهایی (مثلاً `set_bus_skew` و توصیههای DSP48E2) دارند ولی **هیچ Critical Warning یا Error** وجود ندارد. اجرای دوباره `run_synth.bat` در صورتی که `system_wrapper_routed.dcp` موجود باشد، فقط در چند دقیقه بیتاستریم را بازنویسی میکند (مسیر سریع، بدون تکرار سنتز).
+
+---
+
 ## ۱) پیش‌نیازها
 
 | ابزار | نسخه / توضیح |
